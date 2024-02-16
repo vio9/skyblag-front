@@ -27,7 +27,9 @@ return(
                 <Post
                     creationDate={item.creationDate}
                     title={item.title}
-                    content={item.content}
+                    content1={item.content1}
+                    content2={item.content2}
+                    content3={item.content3}
                     image={item.image}
                 />
             ))
