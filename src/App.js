@@ -1,15 +1,22 @@
-import Header from "./Header";
-import Posts from "./Posts";
-import Footer from "./Footer";
-import './style.scss';
+
+import "./style.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import Apropos from "./Apropos";
+import EnVrac from "./EnVrac";
+import OhWow from "./OhWow";
 
 function App() {
   return (
-    <div className="app">
-     <Header/>
-    <Posts/>
-    <Footer/>
-    </div>
+<BrowserRouter>
+			<Routes>
+				<Route exact path="/" element={<Home />} />
+        <Route path="/apropos" element={<Apropos/>}/>
+        <Route path="/envrac" element={<EnVrac/>}/>
+        <Route path="/ohwow" element={<OhWow/>}/>
+			</Routes>
+		</BrowserRouter>
+
   );
 }
 

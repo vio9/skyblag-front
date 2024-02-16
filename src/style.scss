@@ -1,4 +1,4 @@
-$backgroundColor: #F2F2F2;
+$backgroundColor: #e0e7fa;
 $textColor : #01263c;
 $mainFont : 'Helvetica', 'sans-serif';
 
@@ -7,10 +7,29 @@ $mainFont : 'Helvetica', 'sans-serif';
     padding:0;
 }
 
-.app{
+.home{
     background-color: $backgroundColor;
     font-family: $mainFont;
     padding:10px;
+    background-image: url('/medias/background.jpg');
+    background-size: cover;                   
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+}
+
+.a-propos{
+    background-color:$backgroundColor ;
+    font-family: $mainFont;
+}
+
+.oh-wow{
+    background-color:$backgroundColor ;
+    font-family: $mainFont;
+}
+
+.en-vrac{
+    background-color:$backgroundColor ;
+    font-family: $mainFont;
 }
 
 .title-blog{
@@ -30,26 +49,28 @@ $mainFont : 'Helvetica', 'sans-serif';
     margin: 0;
     padding: 0;
     list-style-type: none;
-    color: #024873;
     margin: 4em 0;
     text-align: center;
-    
 }
 
-.navbar li{
+.navbar li {
     display: inline;
     margin:0 10px;
-    font-weight: bold;
-    font-size: 1.3em;
-
+    cursor: pointer;
 }
 
-.navbar li:hover{
-    background: #EECDA3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-    background-clip: text;
-    color: transparent;
+.link_navbar{
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family:$mainFont ;
+}
+
+.link_navbar:hover{
+    color:#8eb2c7;
+    transition: 0.6s;
+
 }
 
 .posts{
