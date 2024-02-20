@@ -1,6 +1,6 @@
-import Header from "./Header";
+import Header from "./header/Header";
 import Posts from "./Posts";
-import Footer from "./Footer";
+import Footer from "./footer/Footer";
 import "./style.scss";
 function Home(){
     return(

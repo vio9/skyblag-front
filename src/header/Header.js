@@ -1,11 +1,11 @@
-
 import { Link } from "react-router-dom";
+import './header-style.scss';
 
 function Header(){
 return(
     <>
     <div className="header">
-        <h1 className="title-blog">Bienvenue sur mon Skyblag</h1>
+        <h1 className="title-blog">Skyblag</h1>
         <ul className="navbar">
             <li><Link to="/" className="link_navbar">Accueil 🪴</Link></li>
             <li><Link to="/apropos" className="link_navbar">A propos 👩🏻‍💻</Link></li>

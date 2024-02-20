@@ -1,3 +1,5 @@
+import "./footer-style.scss"
+
 function Footer(){
     return(
         <div className="footer">

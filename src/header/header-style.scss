@@ -1,0 +1,42 @@
+@import '../style.scss';
+
+.title-blog{
+  background: linear-gradient(to right, #ed97cb, #f9eb6c);
+  background-clip: border-box;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 3em;
+  font-family: "Helvetica Neue", sans-serif;
+  padding-top: 10px;
+}
+
+.navbar{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin: 2.2em 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline;
+    margin:0 10px;
+    cursor: pointer;
+}
+
+.link_navbar{
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family:$mainFont ;
+}
+
+.link_navbar:hover{
+    color:#8eb2c7;
+    transition: 0.6s;
+
+}

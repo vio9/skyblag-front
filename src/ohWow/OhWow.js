@@ -1,7 +1,8 @@
-import Header from "../Header";
+import Header from "../header/Header";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./wow-style.scss";
+import Footer from "../footer/Footer";
 
 function OhWow(){
     const [postsWow, setPostsWow] = useState([]);
@@ -36,6 +37,7 @@ function OhWow(){
                 ))
             }
             </div>
+            <Footer/>
         </div>
     )
 }
