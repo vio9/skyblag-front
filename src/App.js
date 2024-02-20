@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Apropos from "./Apropos";
 import EnVrac from "./EnVrac";
-import OhWow from "./OhWow";
+import OhWow from "./ohWow/OhWow";
 
 function App() {
   return (

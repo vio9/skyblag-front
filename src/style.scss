@@ -34,8 +34,7 @@ $mainFont : 'Helvetica', 'sans-serif';
 
 .title-blog{
     background: #EECDA3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    background: linear-gradient(to right, #EF629F, #ACA3EE);
     background-clip: text;
     color: transparent;
     text-align: center;
@@ -117,4 +116,12 @@ $mainFont : 'Helvetica', 'sans-serif';
 .content_p{
     padding: 4px;
     color: #2d2d2c;
+}
+
+
+@media screen and (max-width: 768px){
+
+    .title-blog{
+        width: 90%;
+    }
 }

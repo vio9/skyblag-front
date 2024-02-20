@@ -1,0 +1,34 @@
+
+
+    .oh-wow{
+        display: flex;
+        flex-direction: column;
+        background: url('../medias/back-sky.png') ;
+        background-size: cover;
+        background-repeat:  no-repeat; 
+        // linear-gradient(90deg, rgb(187, 183, 255) 0%, rgb(127, 232, 207, 0.78) 100%);
+    }
+    .wow-imgs-container{
+        display: flex;
+        width: 90%;
+        }
+
+    .wow-image{
+        max-width: 100%;
+        height: auto;
+    }    
+
+
+
+@media screen and (max-width: 768px){
+
+    .wow-imgs-container{
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        }
+        .wow-image{
+            max-width: 100%;
+            height: auto;
+        }    
+}
