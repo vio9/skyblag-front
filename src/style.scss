@@ -8,12 +8,14 @@ $mainFont : 'Helvetica', 'sans-serif';
 }
 
 .home{
+    display: flex;
+    flex-direction: column;
+     background-size: cover;
+    align-items:  center;      
     background-color: $backgroundColor;
     font-family: $mainFont;
     padding:10px;
-    background-image: url('/medias/background.jpg');
-    background-size: cover;                   
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
     backdrop-filter: blur(10px);
 }
 

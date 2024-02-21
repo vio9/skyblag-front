@@ -4,10 +4,12 @@
     .oh-wow{
         display: flex;
         flex-direction: column;
-         background: url('../medias/test-skyy.jpg') ;
          background-size: cover;
-        align-items:  center;
-       // background: linear-gradient(90deg, rgb(79, 198, 255) 0%, rgba(0, 109, 251, 0.78) 100%);
+        align-items:  center;      
+        background: #56CCF2;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
     }
     .wow-imgs-container{
         display: flex;
@@ -24,9 +26,7 @@
         margin-top:10px;
     }    
     .wow-image:hover{
-        transform: scale(1.1);
-        margin-top:35px
-
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
 
     .wow-presentation {
@@ -40,7 +40,7 @@
         font-family: "Montserrat" ;
         color: #fdfdfd;
         margin:5px 0 5px 0;
-        font-size: 22px;
+        font-size: 20px;
     }
 
 @media screen and (max-width: 768px){

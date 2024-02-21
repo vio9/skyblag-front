@@ -6,6 +6,7 @@ return(
     <>
     <div className="header">
         <h1 className="title-blog">Skyblag</h1>
+        <hr className="title-blog-separator"/>
         <ul className="navbar">
             <li><Link to="/" className="link_navbar">Accueil 🪴</Link></li>
             <li><Link to="/apropos" className="link_navbar">A propos 👩🏻‍💻</Link></li>
