@@ -1,6 +1,7 @@
 import Post from "./Post";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import './style-post.scss';
 
 function Posts(){
     const [posts, setPosts] = useState([]);
@@ -31,6 +32,9 @@ return(
                     content2={item.content2}
                     content3={item.content3}
                     image={item.image}
+                    legend={item.legend}
+                    image2={item.image2}
+                    legend2={item.legend2}
                 />
             ))
         }

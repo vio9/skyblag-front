@@ -39,10 +39,15 @@
     font-weight: bold;
     font-size: 1.3em;
     font-family:$mainFont ;
+    box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+    transition:all .5s ease;
+    border-radius:10px;
+    padding:5px;
 }
 
 .link_navbar:hover{
-    color:#8eb2c7;
+    color:#1585c5;
     transition: 0.6s;
+    box-shadow:2px 8px 4px -6px hsla(0, 0%, 17%, 0.2);
 
 }
