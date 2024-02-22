@@ -4,6 +4,33 @@ import axios from "axios";
 import './style-post.scss';
 
 function Posts(){
+
+    // scroll 
+    const [visible, setVisible] = useState(false);
+
+    const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            if(scrollTop > 500){
+                setVisible(true);
+            } else {
+                setVisible(false)
+            }
+        }
+        const scrollToTop = () => {
+            window.scrollTo({
+                top:0,
+                behavior: "smooth",
+            });
+        };
+    
+        useEffect(() => {
+            document.addEventListener("scroll", handleScroll);
+            return () => {
+                document.removeEventListener("scroll", handleScroll)
+            }
+        }, []);
+    
+    // posts
     const [posts, setPosts] = useState([]);
 
     const getPosts = async () => {
@@ -16,15 +43,18 @@ function Posts(){
             console.log(error)
         }
     }
-
     useEffect(() => {
         getPosts()
     }, []) 
+ 
+
 
 return(
     <div className="posts">
         {
             posts.map(item => (
+                <>
+                          <button id={`scroll-button-${visible ? "visible" : ""}`}onClick={scrollToTop}>SCROLL TO TOP</button>
                 <Post
                     creationDate={item.creationDate}
                     title={item.title}
@@ -36,13 +66,15 @@ return(
                     image2={item.image2}
                     legend2={item.legend2}
                 />
+   
+                </>
             ))
         }
         
     </div>
 )
-}
 
+    }
 export default Posts;
 
 //test 

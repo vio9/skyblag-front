@@ -22,9 +22,10 @@ function Post({title, content1, content2, content3, image, legend, creationDate,
                 <p className="content_p">{content1}</p>
                 <p className="content_p">{content2}</p>
                 <p className="content_p">{content3}</p>
+                <br/>
                 <img className="image_post2"src={image2}/>
                 <p className='legend'>{legend2}</p>
-            </div>
+                </div>
         </div>
     )
 }
