@@ -16,16 +16,19 @@ function Post({title, content1, content2, content3, image, legend, creationDate,
         <div className="post">
             <h2 className="title_post">{title}</h2>
             <p className="content_post">{formattedDate}</p>
-            <img src={image} className="image_post"/>
-            <p className='legend'>{legend}</p>
             <div className="content">
-                <p className="content_p">{content1}</p>
-                <p className="content_p">{content2}</p>
-                <p className="content_p">{content3}</p>
-                <br/>
+                <p className="content_p un">{content1}</p>
+                <p className="content_p deux">{content2}</p>
+                <p className="content_p trois">{content3}</p>
+                </div>
+                <img src={image} className="image_post"/>
+                <p className='legend'>{legend}</p>
                 <img className="image_post2"src={image2}/>
                 <p className='legend'>{legend2}</p>
-                </div>
+             
+            
+
+           
         </div>
     )
 }

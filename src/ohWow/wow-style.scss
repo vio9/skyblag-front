@@ -13,7 +13,8 @@
     }
     .wow-imgs-container{
         display: flex;
-        width: 90%;
+        width: 65%;
+        flex-wrap: wrap;
         }
     .wow-container{
         margin:10px;

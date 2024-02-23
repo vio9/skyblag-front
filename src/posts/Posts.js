@@ -54,7 +54,7 @@ return(
         {
             posts.map(item => (
                 <>
-                          <button id={`scroll-button-${visible ? "visible" : ""}`}onClick={scrollToTop}>SCROLL TO TOP</button>
+                          <button id={`scroll-button-${visible ? "visible" : ""}`}onClick={scrollToTop}>scroll to top</button>
                 <Post
                     creationDate={item.creationDate}
                     title={item.title}

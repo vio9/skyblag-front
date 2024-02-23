@@ -7,7 +7,7 @@ $mainFont : 'Helvetica', 'sans-serif';
     padding:0;
 }
 
-.home{
+.home {
     display: flex;
     flex-direction: column;
      background-size: cover;
@@ -15,8 +15,20 @@ $mainFont : 'Helvetica', 'sans-serif';
     background-color: $backgroundColor;
     font-family: $mainFont;
     padding:10px;
-    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    backdrop-filter: blur(10px);
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); 
+
+}
+
+.en-vrac{
+    display: flex;
+    flex-direction: column;
+     background-size: cover;
+    align-items:  center;      
+    font-family: $mainFont;
+    padding:10px;
+    background: url('./medias/peak_background.svg');
+
+
 }
 
 .a-propos{
