@@ -9,7 +9,6 @@ function Post({title, content1, content2, content3, image, legend, creationDate,
         year:'numeric',
         hour:'numeric',
         minute: 'numeric',
-        second: 'numeric'
     })
 
     return(
