@@ -3,7 +3,7 @@ import "./style.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Apropos from "./Apropos";
-import EnVrac from "./EnVrac";
+import EnVrac from "./enVrac/EnVrac";
 import OhWow from "./ohWow/OhWow";
 
 function App() {

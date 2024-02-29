@@ -1,4 +1,5 @@
-import Header from "./header/Header";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 function EnVrac(){
     return(
