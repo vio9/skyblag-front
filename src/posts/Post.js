@@ -19,11 +19,17 @@ function Post({title, content1, content2, content3, image, legend, creationDate,
                 <p className="content_p un">{content1}</p>
                 <p className="content_p deux">{content2}</p>
                 <p className="content_p trois">{content3}</p>
+            </div>
+            <div className='wrapper-image_post'>
+                <div className='wrapper-image-legend'>
+                        <img src={image} className="image_post"/>
+                        <p className='legend'>{legend}</p>
                 </div>
-                <img src={image} className="image_post"/>
-                <p className='legend'>{legend}</p>
-                <img className="image_post2"src={image2}/>
-                <p className='legend'>{legend2}</p>
+                <div className='wrapper-image-legend'>
+                        <img className="image_post"src={image2}/>
+                        <p className='legend'>{legend2}</p>
+                </div>
+            </div>
              
             
 
