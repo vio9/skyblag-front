@@ -2,6 +2,8 @@
 @import '../style.scss';
 
     .oh-wow{
+        background-color:$backgroundColor ;
+        font-family: $mainFont;
         display: flex;
         flex-direction: column;
          background-size: cover;

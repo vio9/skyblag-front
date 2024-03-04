@@ -19,35 +19,10 @@ $mainFont : 'Helvetica', 'sans-serif';
 
 }
 
-.en-vrac{
-    display: flex;
-    flex-direction: column;
-     background-size: cover;
-    align-items:  center;      
-    font-family: $mainFont;
-    padding:10px;
-    background: url('./medias/peak_background.svg');
-
-
-}
-
 .a-propos{
     background-color:$backgroundColor ;
     font-family: $mainFont;
 }
-
-.oh-wow{
-    background-color:$backgroundColor ;
-    font-family: $mainFont;
-}
-
-.en-vrac{
-    background-color:$backgroundColor ;
-    font-family: $mainFont;
-}
-
-
-
 
 
 @media screen and (max-width: 768px){

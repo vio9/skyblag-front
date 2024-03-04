@@ -1,14 +1,15 @@
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import Loader from "../utils/Loader";
+import './envrac.scss';
+import Construction from "../utils/Construction";
 
 function EnVrac(){
     return(
         <div className="en-vrac">
             <Header/>
-            <p>et cest le en vrac </p>
-            <p>Superrr</p>
-            <Loader/>
+            <Construction/>
+            <Footer/>
+
         </div>
     )
 }
