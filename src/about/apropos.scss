@@ -7,7 +7,39 @@
     flex-direction: column;
      background-size: cover;
     align-items:  center;      
-    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background: linear-gradient(to bottom, #82addb 0%,#ebb2b1 100%);
+    color: #fff;
+}
+.about-content{
+    width:100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.about-title{
+    margin: 5px 0;
+}
+
+.about-p{
+    padding: 10px 0 10px 0;
+ 
+}
+
+.about-link{
+    text-decoration: none;
+    color: #84fef8;
+    font-weight: bold;
+}
+
+.about-image{
+    width: 40%;
+    margin: 0 0 0 2em;
+}
+
+.mini-wrapper-about{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
 }
