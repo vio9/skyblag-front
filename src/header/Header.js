@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import './header-style.scss';
 
-function Header(){
+function Header({color}){
+
+
+
 return(
     <>
     <div className="header">
-        <h1 className="title-blog">Skyblag</h1>
+        <h1 className={`title-blog ${color}`}>Skyblag</h1>
         <hr className="title-blog-separator"/>
         <ul className="navbar">
             <li><Link to="/" className="link_navbar">Accueil 🪴</Link></li>
