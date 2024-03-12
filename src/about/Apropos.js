@@ -4,9 +4,13 @@ import Footer from "../footer/Footer";
 import axios from "axios";
 import './apropos.scss';
 import Player from "../utils/Player";
+import StarContainer from "../utils/StarContainer";
+import Cloud from "../utils/Cloud";
 
 function Apropos(){
     const [infosVideos, setInfosVideos] = useState([]);
+
+
     
     const getInfosVideos = async () => {
         try{
@@ -28,9 +32,8 @@ function Apropos(){
         <div className="a-propos">
              <Header color="white"/>
             <div className="about-content">
-            <div class="cloud-main"></div>
-            <div class="cloud-center"></div>
-            <div class="cloud-left"></div>​
+              <Cloud/>  
+            <StarContainer/>
                 <div className="mini-wrapper-about">
                 <h3 className="about-title">Informations pros : </h3>
                 <p className="about-p">Rendez-vous sur mon LinkedIn <a className='about-link' href="https://www.linkedin.com/in/violaine-ernotte/" target="_blank" rel="noopener noreferrer">par ici </a></p>

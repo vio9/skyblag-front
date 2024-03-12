@@ -7,7 +7,7 @@
     flex-direction: column;
      background-size: cover;
     align-items:  center;      
-    background: linear-gradient(to bottom, #82addb 0%,#ebb2b1 100%);
+    background: linear-gradient(to bottom, #133a63 0%, #2f6094 20%, #ebb2b1 100%);
     color: #fff;
 }
 .about-content{
@@ -45,44 +45,6 @@
     flex-direction: column;
     width: 45%;
 }
-
-// cloud
-
-.cloud-main {
-    width: 13em;
-    height: 4em;
-    background: #ccc;
-    border-radius: 100em;
-    position: absolute;
-    z-index: 100;
-    top: 84px;
-    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.3);
-    background: linear-gradient(#F2F2F2 70%, #E5E5E5);
-    left: 7em;
-  }
-  
-  .cloud-center {
-    width: 6em;
-    height: 6em;
-    margin: 0 auto;
-    background: #F2F2F2;
-    position: absolute;
-    border-radius: 100em;
-    top: 2em;
-    left: 12em;
-  }
-  
-  .cloud-left {
-    width: 88px;
-    height: 90px;
-    margin: 0 auto;
-    background: #F2F2F2;
-    position: absolute;
-    border-radius: 100em;
-    top: 41px;
-    left: 9em;
-  }
-  
 
   @media screen and (max-width: 768px){
     .cloud-main, .cloud-center, .cloud-left{

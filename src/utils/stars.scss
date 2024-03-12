@@ -1,0 +1,77 @@
+.star-filter{
+    filter: drop-shadow(-1px 1px 2px rgba(255, 255, 255, 0.5));
+}
+
+@mixin star($width, $height, $top, $left) {
+padding: 0;
+margin: 0;
+width: $width;
+height: $height;
+background: rgb(255, 255, 255);
+background-size: auto;
+background-size: cover;
+clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+position: absolute;
+top: $top;
+left: $left;
+}
+
+.star {
+@include star(10px, 10px, -12em, 12em);
+}
+
+.star2 {
+@include star(9px, 8px, -14em, 18em);
+}
+
+.star3 {
+@include star(9px, 9px, -17em, 22em);
+}
+
+.star4 {
+@include star(9px, 9px, -17em, 22em);
+}
+
+.star5 {
+    @include star(10px, 8px, -10em, 20em);
+}
+
+.star6 {
+    @include star(8px, 6px, -16em, 1em);
+}
+
+.star7 {
+    @include star(10px, 8px, -15em, 30em);
+}
+
+.star8 {
+    @include star(7px, 7px, -12em, 75em);
+}
+
+.star9 {
+    @include star(10px, 8px, -10em, 90em);
+}
+
+.star10 {
+    @include star(10px, 8px, -18em, 70em);
+}
+
+.star11 {
+    @include star(10px, 8px, -15em, 80em);
+}
+
+.star12 {
+    @include star(9px, 9px, -15.5em, 94em);
+}
+
+.star13 {
+    @include star(7px, 7px, -14em, 100em);
+}
+
+.star14 {
+    @include star(7px, 7px, -14em, 68em);
+}
+
+.star15 {
+    @include star(7px, 7px, -6em, 2em);
+}
