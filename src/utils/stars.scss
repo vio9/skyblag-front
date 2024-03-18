@@ -17,11 +17,11 @@ left: $left;
 }
 
 .star {
-@include star(10px, 10px, -13em, -4em);
+@include star(7px, 7px, -13em, -4em);
 }
 
 .star2 {
-@include star(9px, 8px, -13em, 43em);
+@include star(9px, 8px, -12em, 50em);
 }
 
 .star3 {
@@ -45,7 +45,7 @@ left: $left;
 }
 
 .star8 {
-    @include star(7px, 7px, -9em, -20em);
+    @include star(7px, 7px, -15em, -11em);
 }
 
 .star9 {
@@ -53,19 +53,19 @@ left: $left;
 }
 
 .star10 {
-    @include star(10px, 8px, -8em, -30em);
+    @include star(8px, 8px, -13em, 81em);
 }
 
 .star11 {
-    @include star(7px, 7px, -13em, 54em);
+    @include star(7px, 7px, -13em, 66em);
 }
 
 .star12 {
-    @include star(5px, 5px, -10em, 48em);
+    @include star(5px, 5px, -16em, 69em);
 }
 
 .star13 {
-    @include star(7px, 7px, -14em, 30em);
+    @include star(7px, 7px, -14em, 60em);
 }
 
 .star14 {
@@ -74,4 +74,19 @@ left: $left;
 
 .star15 {
     @include star(7px, 7px, -6em, 2em);
+}
+
+@media screen and (max-width: 768px){
+
+    .star{
+        @include star(10px, 10px, -9em, 3em);
+    }
+
+    .star2{
+        @include star(6px, 6px, -6em, 2em);
+    }
+
+   .star8, .star9, .star10, .star11, .star12, .star13, .star14, .star15 {
+        display: none;
+    }
 }

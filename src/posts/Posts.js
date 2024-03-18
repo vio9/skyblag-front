@@ -56,6 +56,7 @@ return(
                 <>
                           <button id={`scroll-button-${visible ? "visible" : ""}`}onClick={scrollToTop}>scroll to top</button>
                 <Post
+                    key={item.id}
                     creationDate={item.creationDate}
                     title={item.title}
                     content1={item.content1}

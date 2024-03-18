@@ -8,23 +8,40 @@ import StarContainer from "../utils/StarContainer";
 import Cloud from "../utils/Cloud";
 
 function Apropos(){
-    const [infosVideos, setInfosVideos] = useState([]);
+
+    const infosVideos = [
+
+        {
+              "_id": "65e8696c51b21f53a3ac6773",
+              "title": "la Zone d'intérêt",
+              "src": "https://www.youtube-nocookie.com/embed/m6cz6xTgkIY?si=_qCBeQ5wLbSaQT2i&amp;controls=0",
+              "__v": 0
+        },
+        {
+              "_id": "65e86ba4c3f788360cccc745",
+              "title": "Dune - 2eme partie",
+              "src": "https://www.youtube-nocookie.com/embed/XyGGWcr0uhc?si=f6LCmWKccXHdi_Lo&amp;controls=0",
+              "__v": 0
+        }
+  
+  ]
+    // const [infosVideos, setInfosVideos] = useState([]);
 
 
     
-    const getInfosVideos = async () => {
-        try{
-            const result = await axios.get('http://localhost:4400/api/getAllVideos')
-            setInfosVideos(result.data)
-        }
-        catch(error){
-            console.log(error)
-        }
-    }
+    // const getInfosVideos = async () => {
+    //     try{
+    //         const result = await axios.get('http://localhost:4400/api/getAllVideos')
+    //         setInfosVideos(result.data)
+    //     }
+    //     catch(error){
+    //         console.log(error)
+    //     }
+    // }
 
-    useEffect(() => {
-        getInfosVideos()
-    }, [])
+    // useEffect(() => {
+    //     getInfosVideos()
+    // }, [])
 
 
     return(
@@ -41,6 +58,7 @@ function Apropos(){
                {
                 infosVideos.map(item => (
                     <Player
+                        key={item.id}
                         title={item.title}
                         src={item.src}
                     />
@@ -56,9 +74,6 @@ function Apropos(){
                 src="https://www.youtube.com/embed/fxOGBxg8nsY?si=sLacyFIZGtHlbZzG"
                 />
                 </div>
-                {/* <img className="about-image" src="https://i.postimg.cc/kMtHhpYD/20231102-182604.jpg" alt="a propos illustration" /> */}
-
-             
             </div>
             <Footer/>
         </div>

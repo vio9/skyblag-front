@@ -1,16 +1,16 @@
 // cloud
 
 .cloud-main {
-    width: 10em;
-    height: 3.5em;
-    background: #ccc;
-    border-radius: 100em;
-    position: absolute;
-    z-index: 100;
-    top: 80px;
-    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.3);
-    background: linear-gradient(#F2F2F2 70%, #E5E5E5);
-    left: 7em;
+  width: 10em;
+  height: 3.5em;
+  background: #ccc;
+  border-radius: 100em;
+  position: absolute;
+  z-index: 100;
+  top: 80px;
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(#F2F2F2 70%, #E5E5E5);
+  left: 2em;
   }
   
   .cloud-center {
@@ -21,7 +21,7 @@
     position: absolute;
     border-radius: 100em;
     top: 3em;
-    left: 12em;
+    left: 7em;
   }
   
   .cloud-left {
@@ -32,7 +32,7 @@
     position: absolute;
     border-radius: 100em;
     top: 48px;
-    left: 9em;
+    left: 4em;
   }
 
   @media screen and (max-width: 768px){

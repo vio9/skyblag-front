@@ -11,6 +11,7 @@ function OhWow(){
 
     const getWowPost =  async () => {
         try{
+            setLoading(true);
             const result = await axios.get('http://localhost:4400/api/getAllOhWow');
             setPostsWow(result.data);
             setLoading(false);
@@ -31,7 +32,7 @@ function OhWow(){
             <div className="wow-imgs-container">
             {
                 postsWow.map(item => (
-                    <div className="wow-container">
+                    <div className="wow-container" key={item.id}>
                     <h2 className="wow-title">{item.title}</h2>
                     {
                         Loading ?  <Loader/> : <img className="wow-image" src={item.image} alt="paysages"/> 
