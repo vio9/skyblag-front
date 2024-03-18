@@ -15,7 +15,6 @@ function Apropos(){
     const getInfosVideos = async () => {
         try{
             const result = await axios.get('http://localhost:4400/api/getAllVideos')
-            console.log(result.data)
             setInfosVideos(result.data)
         }
         catch(error){
@@ -57,7 +56,7 @@ function Apropos(){
                 src="https://www.youtube.com/embed/fxOGBxg8nsY?si=sLacyFIZGtHlbZzG"
                 />
                 </div>
-                <img className="about-image" src="https://i.postimg.cc/kMtHhpYD/20231102-182604.jpg" />
+                {/* <img className="about-image" src="https://i.postimg.cc/kMtHhpYD/20231102-182604.jpg" alt="a propos illustration" /> */}
 
              
             </div>

@@ -22,11 +22,11 @@ function Post({title, content1, content2, content3, image, legend, creationDate,
             </div>
             <div className='wrapper-image_post'>
                 <div className='wrapper-image-legend'>
-                        <img src={image} className="image_post"/>
+                        <img src={image} className="image_post" alt={legend}/>
                         <p className='legend'>{legend}</p>
                 </div>
                 <div className='wrapper-image-legend'>
-                        <img className="image_post"src={image2}/>
+                        <img className="image_post"src={image2} alt={legend2}/>
                         <p className='legend'>{legend2}</p>
                 </div>
             </div>

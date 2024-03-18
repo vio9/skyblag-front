@@ -3,9 +3,9 @@ import "./cloud.scss"
 function Cloud(){
     return(
         <>
-            <div class="cloud-main"></div>
-            <div class="cloud-center"></div>
-            <div class="cloud-left"></div>
+            <div className="cloud-main"></div>
+            <div className="cloud-center"></div>
+            <div className="cloud-left"></div>
             </>
     )
 }

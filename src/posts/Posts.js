@@ -38,7 +38,6 @@ function Posts(){
             const result = await axios.get('http://localhost:4400/api/getAll');
             const sortedPosts = result.data.sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate));
             setPosts(sortedPosts);
-           console.log(sortedPosts)
         }
         catch(error){
             console.log(error)

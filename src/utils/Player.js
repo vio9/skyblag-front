@@ -6,9 +6,9 @@ function Player({title, src}){
             <h3 className="video-title">{title}</h3>
             <iframe 
                 src={src}
-                frameborder="0" 
+                frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen
+                allowFullscreen
             />
         </div>
     )

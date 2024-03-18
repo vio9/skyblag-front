@@ -17,15 +17,15 @@ left: $left;
 }
 
 .star {
-@include star(10px, 10px, -12em, 12em);
+@include star(10px, 10px, -13em, -4em);
 }
 
 .star2 {
-@include star(9px, 8px, -14em, 18em);
+@include star(9px, 8px, -13em, 43em);
 }
 
 .star3 {
-@include star(9px, 9px, -17em, 22em);
+@include star(9px, 9px, -17em, -22em);
 }
 
 .star4 {
@@ -41,35 +41,35 @@ left: $left;
 }
 
 .star7 {
-    @include star(10px, 8px, -15em, 30em);
+    @include star(10px, 8px, -15em, -40em);
 }
 
 .star8 {
-    @include star(7px, 7px, -12em, 75em);
+    @include star(7px, 7px, -9em, -20em);
 }
 
 .star9 {
-    @include star(10px, 8px, -10em, 90em);
+    @include star(4px, 4px, -16em, 47em);
 }
 
 .star10 {
-    @include star(10px, 8px, -18em, 70em);
+    @include star(10px, 8px, -8em, -30em);
 }
 
 .star11 {
-    @include star(10px, 8px, -15em, 80em);
+    @include star(7px, 7px, -13em, 54em);
 }
 
 .star12 {
-    @include star(9px, 9px, -15.5em, 94em);
+    @include star(5px, 5px, -10em, 48em);
 }
 
 .star13 {
-    @include star(7px, 7px, -14em, 100em);
+    @include star(7px, 7px, -14em, 30em);
 }
 
 .star14 {
-    @include star(7px, 7px, -14em, 68em);
+    @include star(7px, 7px, -14em, 8em);
 }
 
 .star15 {

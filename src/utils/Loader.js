@@ -2,7 +2,7 @@ import "./loader.scss";
 
 function Loader(){
     return(
-        <div class="custom-loader"></div>
+        <div className="custom-loader"></div>
     )
 }
 

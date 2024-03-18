@@ -34,7 +34,7 @@ function OhWow(){
                     <div className="wow-container">
                     <h2 className="wow-title">{item.title}</h2>
                     {
-                        Loading ?  <Loader/> : <img className="wow-image" src={item.image}/> 
+                        Loading ?  <Loader/> : <img className="wow-image" src={item.image} alt="paysages"/> 
                     } 
                     </div>
                 ))

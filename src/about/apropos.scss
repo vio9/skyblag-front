@@ -30,7 +30,7 @@
 
 .about-link{
     text-decoration: none;
-    color: #2e1a78;
+    color: #ffa6bf;;
     font-weight: bold;
 
 }
@@ -43,10 +43,15 @@
 .mini-wrapper-about{
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 55%;
 }
 
   @media screen and (max-width: 768px){
+
+    .a-propos{
+        width:100%;
+    }
+
     .cloud-main, .cloud-center, .cloud-left{
         display: none;
     }
