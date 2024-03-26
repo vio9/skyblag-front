@@ -9,39 +9,21 @@ import Cloud from "../utils/Cloud";
 
 function Apropos(){
 
-    const infosVideos = [
-
-        {
-              "_id": "65e8696c51b21f53a3ac6773",
-              "title": "la Zone d'intérêt",
-              "src": "https://www.youtube-nocookie.com/embed/m6cz6xTgkIY?si=_qCBeQ5wLbSaQT2i&amp;controls=0",
-              "__v": 0
-        },
-        {
-              "_id": "65e86ba4c3f788360cccc745",
-              "title": "Dune - 2eme partie",
-              "src": "https://www.youtube-nocookie.com/embed/XyGGWcr0uhc?si=f6LCmWKccXHdi_Lo&amp;controls=0",
-              "__v": 0
+    const [infosVideos, setInfosVideos] = useState([]);
+    const urlApiVideos = process.env.REACT_APP_API_VIDEOS;
+    const getInfosVideos = async () => {
+        try{
+            const result = await axios.get(urlApiVideos)
+            setInfosVideos(result.data)
         }
-  
-  ]
-    // const [infosVideos, setInfosVideos] = useState([]);
+        catch(error){
+            console.log(error)
+        }
+    }
 
-
-    
-    // const getInfosVideos = async () => {
-    //     try{
-    //         const result = await axios.get('http://localhost:4400/api/getAllVideos')
-    //         setInfosVideos(result.data)
-    //     }
-    //     catch(error){
-    //         console.log(error)
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     getInfosVideos()
-    // }, [])
+    useEffect(() => {
+        getInfosVideos()
+    }, [])
 
 
     return(

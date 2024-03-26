@@ -31,11 +31,12 @@ function Posts(){
         }, []);
     
     // posts
+    const urlApiPost = process.env.REACT_APP_API_POST; 
     const [posts, setPosts] = useState([]);
 
     const getPosts = async () => {
         try{
-            const result = await axios.get('http://localhost:4400/api/getAll');
+            const result = await axios.get(urlApiPost);
             const sortedPosts = result.data.sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate));
             setPosts(sortedPosts);
         }

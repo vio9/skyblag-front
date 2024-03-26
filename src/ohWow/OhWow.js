@@ -7,14 +7,13 @@ import Loader from "../utils/Loader";
 
 function OhWow(){
     const [postsWow, setPostsWow] = useState([]);
-    const [Loading, setLoading] = useState(true);
+    const [Loading, setLoading] = useState(false);
+    const urlApiOhWow = process.env.REACT_APP_API_WOW;
 
     const getWowPost =  async () => {
         try{
-            setLoading(true);
-            const result = await axios.get('http://localhost:4400/api/getAllOhWow');
+            const result = await axios.get(urlApiOhWow);
             setPostsWow(result.data);
-            setLoading(false);
         }
         catch(error){
             console.log(error)
