@@ -1,13 +1,45 @@
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import './envrac.scss';
-import Construction from "../utils/Construction";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import EnVracPost from "./EnVracPost";
 
 function EnVrac(){
+
+    const [enVracPosts, setEnVracPosts] = useState([]);
+    const urlAPiEnVrac = process.env.REACT_APP_API_ENVRAC;
+
+    const getEnVracPosts = async () => {
+        try{
+             const result = await axios.get(urlAPiEnVrac);
+            setEnVracPosts(result.data)
+        }
+        catch(error){
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getEnVracPosts();
+    }, [])
+
     return(
         <div className="en-vrac">
-            <Header/>
-            <Construction/>
+            <Header color="three"/>
+            <h3 className="big-title-en-vrac">Animaux en vrac</h3>
+            <div className="wrapper-general">
+            {
+                enVracPosts.map(item => (
+                    <EnVracPost
+                        key={item.id}
+                        title={item.title}
+                        image={item.image}
+                        content={item.content}
+                    />
+                ))
+            }     
+            </div>
             <Footer/>
 
         </div>

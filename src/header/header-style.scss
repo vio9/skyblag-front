@@ -3,7 +3,8 @@
 
 .title-blog{
 background-color: #FBDA61;
-background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+// background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+background-image: linear-gradient(45deg, #FB9461 0%, #FF5ACD 100%);
   background-clip: border-box;
   background-clip: text;
   color: transparent;
@@ -18,6 +19,10 @@ background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
 .title-blog.white{
     background-image: linear-gradient(45deg, #ffffff 0%, #dcedff 100%);
     }
+
+.title-blog.three{
+    background-image: linear-gradient(45deg, #128bcd 0%, #2bc0f6 100%);
+     }
 
 
 .title-blog-separator{

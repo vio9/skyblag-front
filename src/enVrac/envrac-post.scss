@@ -1,0 +1,24 @@
+.wrapper-post-envrac{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding: 5px;
+    margin: 0 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+}
+
+.title-post-envrac{
+margin:2px 0;
+}
+
+.image-post-envrac{
+    width:80%;
+}
+
+.content-post-envrac{
+    width:80%;
+    margin:4px 0;
+}

@@ -23,7 +23,7 @@ function Apropos(){
 
     useEffect(() => {
         getInfosVideos()
-    }, [])
+    }, []);
 
 
     return(
