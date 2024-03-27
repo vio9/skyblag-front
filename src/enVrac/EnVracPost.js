@@ -1,6 +1,5 @@
 import "./envrac-post.scss";
-import React, { Suspense, lazy } from 'react';
-import LazyImageGeneric from "../utils/LazyImageGeneric";
+import { Suspense, lazy } from 'react';
 
 function EnVracPost({title, image, content}){
 

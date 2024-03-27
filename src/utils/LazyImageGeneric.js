@@ -1,9 +1,10 @@
 import { lazy, Suspense } from 'react';
+import Loader from './loader/Loader';
 
 const LazyImageGeneric = ({ src, ...rest }) => {
   const ImageComponent = lazy(() => import('../utils/LazyImageComponent'));
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loader/>}>
       <ImageComponent src={src}  {...rest} />
     </Suspense>
   );

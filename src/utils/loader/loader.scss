@@ -1,0 +1,32 @@
+.wrapper-loader{
+    background-color: rgba(255, 255, 255, 0.766);
+    border-radius: 10px;
+    padding:10px;
+    display: f;
+
+}
+
+.p-loader{
+    font-size: 1em;
+    text-align: center;
+}
+
+.emoji{
+    animation:normal;
+    animation-name: run;
+    animation-duration: 5s;
+    position: absolute;
+    font-size: 2em;
+}
+
+@keyframes run {
+    0% {
+      right: 49%;
+    }
+    50% {
+      right: 44%;
+    }
+    100% {
+       right: 49%;    
+    }
+}
