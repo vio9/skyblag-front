@@ -2,6 +2,7 @@ import Post from "./Post";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import './style-post.scss';
+import {lazy} from "react";
 
 function Posts(){
 

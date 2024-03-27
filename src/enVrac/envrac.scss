@@ -25,3 +25,17 @@
 .big-title-en-vrac{
     font-size: 2em;
 }
+
+@media screen and (max-width: 768px){
+
+    .wrapper-general{
+        flex-direction: column;
+        margin-top: 0.5em;
+    }
+
+    .big-title-en-vrac{
+        font-size: 1.5em;
+        margin-top: 1em;
+    }
+}
+    

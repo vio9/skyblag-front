@@ -16,9 +16,22 @@ margin:2px 0;
 
 .image-post-envrac{
     width:80%;
+    pointer-events: none;
 }
 
 .content-post-envrac{
     width:80%;
     margin:4px 0;
 }
+
+@media screen and (max-width: 768px){
+
+    .wrapper-post-envrac{
+        max-width: 95%;
+        margin: 1em 1em;
+    }
+    .image-post-envrac{
+        width: 100%;
+    }
+}
+    
