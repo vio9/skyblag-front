@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense, lazy } from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import axios from "axios";
 import './apropos.scss';
-import Player from "../utils/Player";
 import StarContainer from "../utils/StarContainer";
 import Cloud from "../utils/Cloud";
+import Loader from "../utils/loader/Loader";
 
 function Apropos(){
 
@@ -25,6 +25,7 @@ function Apropos(){
         getInfosVideos()
     }, []);
 
+    const LazyPlayer = lazy(() => import('../utils/LazyPlayer'));
 
     return(
         <div className="a-propos">
@@ -39,11 +40,14 @@ function Apropos(){
                 <h3 className="about-title">Derniers films vus : </h3>
                {
                 infosVideos.map(item => (
-                    <Player
+                    <Suspense fallback={<div><Loader/></div>}>
+                         <LazyPlayer
                         key={item.id}
                         title={item.title}
                         src={item.src}
                     />
+                    </Suspense>
+                   
                 ))
                }
                <h3 className="about-title">Podcasts préférés</h3>
@@ -51,10 +55,13 @@ function Apropos(){
               <a className="about-link" href= "https://embed.acast.com/$/63a6f9cd471563001006a3a8/dune-2?feed=true">🎧 Réalisé sans trucage, podcast critique ciné</a>
               <h3 className="about-title">Jeu vidéo du moment</h3>
                 <p>Baldur's Gate 3</p>
-                <Player
-                title="Baldur's Gate 3"
-                src="https://www.youtube.com/embed/fxOGBxg8nsY?si=sLacyFIZGtHlbZzG"
-                />
+                <Suspense fallback={<div><Loader/></div>}>
+                    <LazyPlayer
+                    title="Baldur's Gate 3"
+                    src="https://www.youtube.com/embed/fxOGBxg8nsY?si=sLacyFIZGtHlbZzG"
+                    />
+                </Suspense>
+                
                 </div>
             </div>
             <Footer/>

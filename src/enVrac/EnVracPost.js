@@ -6,8 +6,6 @@ function EnVracPost({title, image, content}){
 
     const LazyImage = lazy(() => import('../utils/LazyImageGeneric'));
 
-
-
     return(
         <div className="wrapper-post-envrac">
             <h4 className="title-post-envrac">{title}</h4>
