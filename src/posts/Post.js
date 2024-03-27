@@ -1,4 +1,6 @@
 import './style-post.scss';
+import { Suspense, lazy } from 'react';
+import Loader from '../utils/loader/Loader';
 
 function Post({title, content1, content2, content3, image, legend, creationDate, image2, legend2}){
 
@@ -11,6 +13,8 @@ function Post({title, content1, content2, content3, image, legend, creationDate,
         minute: 'numeric',
     })
 
+    const LazyImage = lazy(() => import('../utils/LazyImageGeneric'));
+
     return(
         <div className="post">
             <h2 className="title_post">{title}</h2>
@@ -22,18 +26,18 @@ function Post({title, content1, content2, content3, image, legend, creationDate,
             </div>
             <div className='wrapper-image_post'>
                 <div className='wrapper-image-legend'>
-                        <img src={image} className="image_post" alt={legend}/>
+                <Suspense fallback={<div><Loader/></div>}>
+                     <LazyImage src={image}className="image_post" alt={legend} />
+                </Suspense>
                         <p className='legend'>{legend}</p>
                 </div>
                 <div className='wrapper-image-legend'>
-                        <img className="image_post"src={image2} alt={legend2}/>
+                <Suspense fallback={<Loader/>}>
+                    <LazyImage src={image2}className="image_post" alt={legend2} />
+                </Suspense>
                         <p className='legend'>{legend2}</p>
                 </div>
             </div>
-             
-            
-
-           
         </div>
     )
 }

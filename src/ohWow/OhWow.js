@@ -28,7 +28,6 @@ function OhWow(){
     return(
         <div className="oh-wow">
             <Header/>
-            <Loader/>
             <p className="wow-presentation">Des photos avec des titres ! WOW</p>
             <div className="wow-imgs-container">
             {
