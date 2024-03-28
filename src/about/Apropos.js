@@ -51,10 +51,10 @@ function Apropos(){
                 ))
                }
                <h3 className="about-title">Podcasts préférés</h3>
-               <a className="about-link" href="https://www.radiofrance.fr/franceinter/podcasts/quand-les-dieux-rodaient-sur-la-terre/quand-les-dieux-rodaient-sur-la-terre-du-samedi-04-novembre-2023-1272749"> 🎧 Quand les dieux rodaient sur la terre, les épisodes sur Achille</a>
-              <a className="about-link" href= "https://embed.acast.com/$/63a6f9cd471563001006a3a8/dune-2?feed=true">🎧 Réalisé sans trucage, podcast critique ciné</a>
+              <p className="about-p"><a className="about-link" href="https://www.radiofrance.fr/franceinter/podcasts/quand-les-dieux-rodaient-sur-la-terre/quand-les-dieux-rodaient-sur-la-terre-du-samedi-04-novembre-2023-1272749"> 🎧 Quand les dieux rodaient sur la terre, les épisodes sur Achille</a></p> 
+              <p className="about-p"><a className="about-link" href= "https://embed.acast.com/$/63a6f9cd471563001006a3a8/dune-2?feed=true">🎧 Réalisé sans trucage, podcast critique ciné</a></p>
               <h3 className="about-title">Jeu vidéo du moment</h3>
-                <p>Baldur's Gate 3</p>
+                <p className="about-p">Baldur's Gate 3</p>
                 <Suspense fallback={<div><Loader/></div>}>
                     <LazyPlayer
                     title="Baldur's Gate 3"
