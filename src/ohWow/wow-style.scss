@@ -15,7 +15,9 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        min-height: 63vh;
         }
+
     .wow-container{
         margin:10px;
         width: calc(100%/4);
