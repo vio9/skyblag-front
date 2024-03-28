@@ -1,12 +1,12 @@
 .mega-wrapper{
 display: flex;
-width:80%;
-
+// width:80%;
+flex-direction: column;
 }
 
 .wrapper-waiting{
 background-color: #fff;
-  width: 78%;
+  width: 600px;
   height: 80%;
   display: flex;
   flex-direction: column;

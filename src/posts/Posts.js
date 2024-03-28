@@ -2,8 +2,6 @@ import Post from "./Post";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import './style-post.scss';
-import {lazy} from "react";
-import WaitingPost from "../utils/waitingPost/WaitingPost";
 
 function Posts(){
 
@@ -31,6 +29,7 @@ function Posts(){
                 document.removeEventListener("scroll", handleScroll)
             }
         }, []);
+        
     
     // posts
     const urlApiPost = process.env.REACT_APP_API_POST; 
@@ -50,16 +49,12 @@ function Posts(){
         getPosts();
     }, []) 
  
-
-
 return(
     <div className="posts">
-
-        <WaitingPost/>
         {
             posts.map(item => (
                 <>
-                          <button id={`scroll-button-${visible ? "visible" : ""}`}onClick={scrollToTop}>scroll to top</button>
+                    <button id={`scroll-button-${visible ? "visible" : ""}`}onClick={scrollToTop}>scroll to top</button>
                 <Post
                     key={item.id}
                     creationDate={item.creationDate}
