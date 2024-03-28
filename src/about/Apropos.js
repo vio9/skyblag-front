@@ -6,6 +6,7 @@ import './apropos.scss';
 import StarContainer from "../utils/StarContainer";
 import Cloud from "../utils/Cloud";
 import Loader from "../utils/loader/Loader";
+import HandleScroll from "../utils/handlescroll/HandleScroll";
 
 function Apropos(){
 
@@ -34,6 +35,7 @@ function Apropos(){
               <Cloud/>  
             <StarContainer/>
                 <div className="mini-wrapper-about">
+                    <HandleScroll/>
                 <h3 className="about-title">Informations pros : </h3>
                 <p className="about-p">Rendez-vous sur mon LinkedIn <a className='about-link' href="https://www.linkedin.com/in/violaine-ernotte/" target="_blank" rel="noopener noreferrer">par ici </a></p>
                 <p className="about-p">Retrouvez ce site  ainsi que d'autres projets sur <a className='about-link' href="https://github.com/vio9" target="_blank" rel="noopener noreferrer">mon profil Github</a></p>            

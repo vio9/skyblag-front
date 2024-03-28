@@ -2,6 +2,7 @@ import Post from "./Post";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import './style-post.scss';
+import HandleScroll from "../utils/handlescroll/HandleScroll";
 
 function Posts(){
 
@@ -54,7 +55,7 @@ return(
         {
             posts.map(item => (
                 <>
-                    <button id={`scroll-button-${visible ? "visible" : ""}`}onClick={scrollToTop}>scroll to top</button>
+                <HandleScroll/>
                 <Post
                     key={item.id}
                     creationDate={item.creationDate}

@@ -4,6 +4,7 @@ import axios from "axios";
 import "./wow-style.scss";
 import Footer from "../footer/Footer";
 import Loader from "../utils/loader/Loader";
+import HandleScroll from "../utils/handlescroll/HandleScroll";
 
 function OhWow(){
     const [postsWow, setPostsWow] = useState([]);
@@ -32,12 +33,15 @@ function OhWow(){
             <div className="wow-imgs-container">
             {
                 postsWow.map(item => (
+                    <>
+                    <HandleScroll/>
                     <div className="wow-container" >
                     <h2 className="wow-title" key={item.id}>{item.title}</h2>
                     <Suspense fallback={<Loader/>}>
                         <LazyImage src={item.image} alt="paysages" className="wow-image"  />
                     </Suspense>      
                     </div>
+                    </>
                 ))
             }
             </div>

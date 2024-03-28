@@ -4,6 +4,7 @@ import './envrac.scss';
 import { useEffect, useState } from "react";
 import axios from "axios";
 import EnVracPost from "./EnVracPost";
+import HandleScroll from "../utils/handlescroll/HandleScroll";
 
 function EnVrac(){
 
@@ -31,13 +32,16 @@ function EnVrac(){
             <div className="wrapper-general">
             {
                 enVracPosts.map(item => (
+                    <>
+                    <HandleScroll/>
                     <EnVracPost
                         key={item.id}
                         title={item.title}
                         image={item.image}
                         content={item.content}
                     />
-                ))
+                    </>
+                ))      
             }     
             </div>
             <Footer/>
