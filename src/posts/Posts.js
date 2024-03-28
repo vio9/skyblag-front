@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import './style-post.scss';
 import {lazy} from "react";
+import WaitingPost from "../utils/waitingPost/WaitingPost";
 
 function Posts(){
 
@@ -53,6 +54,8 @@ function Posts(){
 
 return(
     <div className="posts">
+
+        <WaitingPost/>
         {
             posts.map(item => (
                 <>

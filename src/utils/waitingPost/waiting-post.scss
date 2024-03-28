@@ -1,0 +1,90 @@
+.mega-wrapper{
+display: flex;
+width:80%;
+
+}
+
+.wrapper-waiting{
+background-color: #fff;
+  width: 78%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:10px;
+  padding: 3px;
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+      background-position: -800px 0
+    }
+    100% {
+      background-position: 800px 0
+    }
+  }
+
+  .animation-placeholder {
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, #eeeeee 8%, #e8e8e8  18%, #eeeeee 33%);
+    position: relative;
+}
+.animation-placeholder2{
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, #eeeeee 8%, #e8e8e8 18%, #eeeeee 33%);
+    position: relative;
+}
+  
+
+.title-waiting{
+    background-color: #dddbdb;
+    width: 56%;
+    height: 2em;
+    margin: 0.5em 0.5em 0.5em 0.8em;
+        animation-duration: 7s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background-color: #f6f7f8;
+       
+      
+}
+
+.img-waiting{
+    background-color: #dddbdb;
+    width: 55%;
+    height: 17em;
+    margin: 0.7em 0.5em 0.5em 0.5em;
+}
+
+.p-waiting{
+    background-color: #dddbdb;
+    width: 55%;  
+    height: 3em;
+    margin: 0.5em 0.5em 1.5em 0.5em;
+}
+
+.mini-wrapper{
+    width: 76%;
+    display: flex;
+    justify-content: left;
+    margin: 10px 0 0 92px;
+}
+
+.rond{
+    background-color: #dddbdb;
+    width: 16%;
+    height: 4em;
+    border-radius: 4em;
+
+}
