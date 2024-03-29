@@ -5,6 +5,7 @@ import Home from "./Home";
 import Apropos from "./about/Apropos";
 import EnVrac from "./enVrac/EnVrac";
 import OhWow from "./ohWow/OhWow";
+import Quiz from "./quiz/Quiz";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/apropos" element={<Apropos/>}/>
         <Route path="/envrac" element={<EnVrac/>}/>
         <Route path="/ohwow" element={<OhWow/>}/>
+        <Route path="/quiz" element={<Quiz/>}/>
 			</Routes>
 		</BrowserRouter>
 
