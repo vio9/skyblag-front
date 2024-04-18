@@ -1,0 +1,38 @@
+.wrapper-quiz-comp{
+    width:60%;
+    background-color: #fff;
+    padding:20px;
+    border-radius: 17px;
+}
+
+.quiz-comp-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-comp-title{
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+
+.quiz-comp-answer{
+    margin:5px;
+}
+
+.checkbox{
+    padding: 0 4px 0 0;
+}
+
+.quiz-comp-form-p{
+    padding-left:10px;
+}
+
+.quiz-comp-label-answer{
+    display: flex;
+    margin:3px;
+}
+
+.quiz-comp-submit{
+    width:5em;
+    margin-top: 10px;
+}

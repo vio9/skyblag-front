@@ -1,14 +1,29 @@
+import "./quiz-component.scss";
+
 function QuizComponent(){
     return(
         <div className="wrapper-quiz-comp">
             <div className="quiz-comp-wrapper">
-                <h2 className="quiz-comp-title">mettre la question ici</h2>
-                <ul>
-                    <li className="quiz-comp-answer">reponse 1</li>
-                    <li className="quiz-comp-answer">reponse 2</li>
-                    <li className="quiz-comp-answer">reponse 3</li>
-                    <li className="quiz-comp-answer">reponse 4</li>
-                </ul>
+                <form className="quiz-comp-form">
+                <label className="quiz-comp-title">mettre la question ici</label>
+                <label className="quiz-comp-label-answer">
+                    <input type="checkbox" name="myCheckbox" className="checkbox" value=""/>
+                    <p className="quiz-comp-form-p">reponse 1</p>
+                </label>
+                <label className="quiz-comp-label-answer">
+                    <input type="checkbox" name="myCheckbox" className="checkbox" value=""/>
+                    <p className="quiz-comp-form-p">reponse 1</p>
+                </label>
+                <label className="quiz-comp-label-answer">
+                    <input type="checkbox" name="myCheckbox" className="checkbox" value=""/>
+                    <p className="quiz-comp-form-p">reponse 2</p>
+                </label>
+                <label className="quiz-comp-label-answer">
+                    <input type="checkbox" name="myCheckbox" className="checkbox" value=""/>
+                    <p className="quiz-comp-form-p">reponse 4</p>
+                </label>
+                <input type="submit" value="Envoyer" className="quiz-comp-submit"/>
+                </form>
             </div>
         </div>
     )
