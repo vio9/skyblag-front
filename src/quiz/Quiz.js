@@ -34,17 +34,34 @@ function Quiz(){
        ...prevSelectedAnswers,
       [id]: answerScore
     }));
-    console.log(answerScore)
     setSelectedAnswersArray(prevSelectedAnswersArray => {
         const updatedSelectedAnswersArray = [...prevSelectedAnswersArray];
         updatedSelectedAnswersArray.push(answerScore);
         return updatedSelectedAnswersArray;
     });
    }
+   let numberArray;
 
    const onSubmit = () => {
     console.log('tableau:',selectedAnswersArray)
-   }
+    numberArray = selectedAnswersArray.map(Number).reduce((total, current) => total +current, 0);
+    console.log(numberArray)
+    AnimalTotem();
+   }    
+
+   function AnimalTotem(){
+    if(numberArray <=5){
+        alert('ton animal totem est la loutre')
+
+    } else if(numberArray >5 && numberArray <=10){
+        alert("ton anumal totem est la chouette")
+    } else if(numberArray > 10 && numberArray <=15){
+       alert("ton animal totem est la poubelle")
+    } else if(numberArray > 15 && numberArray <=20){
+        alert("ton animal totem est le rat dégueu et pas le rat d'égoût")
+    }
+   } 
+
 
     return(
         <div className="quiz-wrapper">
