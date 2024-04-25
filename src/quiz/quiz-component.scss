@@ -1,18 +1,19 @@
 .wrapper-quiz-comp{
-    width:60%;
+    width:70%;
+}
+
+.quiz-comp-form{
+    display: flex;
+    margin:4px;
     background-color: #fff;
     padding:20px;
     border-radius: 17px;
 }
 
-.quiz-comp-form{
-    display: flex;
-    flex-direction: column;
-}
-
 .quiz-comp-title{
     font-size: 1.3em;
     margin-bottom: 0.5em;
+    font-weight: bold;
 }
 
 .quiz-comp-answer{
@@ -25,6 +26,7 @@
 
 .quiz-comp-form-p{
     padding-left:10px;
+    font-size: 17px;
 }
 
 .quiz-comp-label-answer{
@@ -35,4 +37,15 @@
 .quiz-comp-submit{
     width:5em;
     margin-top: 10px;
+}
+
+.quiz-image{
+    max-width: 50%;
+    display: flex;
+}
+
+.quiz-questions-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4px;
 }

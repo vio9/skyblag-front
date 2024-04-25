@@ -1,54 +1,35 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+
 import "./quiz-component.scss";
 
-function QuizComponent(){
-    const [questionsData, setQuestionsData] = useState([]);
-
-     const getQuiz = async () => {
-        try{
-            const result = await axios.get("https://skyblag-back.onrender.com/api/getAllQuiz");
-            setQuestionsData(result.data)
-            console.log(result.data)
-       
-        } 
-        catch(error){
-            console.log(error)
-        }
-    }
-
-    useEffect(() => {
-        getQuiz()
-    }, [])
-
-
+function QuizComponent({image, question, answer1, answer1Score, answer2, answer2Score,
+    answer3, answer3Score, answer4, answer4Score, id}){
+  
     return(
         <div className="wrapper-quiz-comp">
             <div className="quiz-comp-wrapper">
-                <form className="quiz-comp-form">{
-                    questionsData.map(item => (
-                        <label className="quiz-comp-title">{}</label>
-                    ))
-                }
-                <label className="quiz-comp-title">mettre la question ici</label>
-                <label className="quiz-comp-label-answer">
-                    <input type="checkbox" name="myCheckbox" className="checkbox" value=""/>
-                    <p className="quiz-comp-form-p">reponse 1</p>
-                </label>
-                <label className="quiz-comp-label-answer">
-                    <input type="checkbox" name="myCheckbox" className="checkbox" value=""/>
-                    <p className="quiz-comp-form-p">reponse 2</p>
-                </label>
-                <label className="quiz-comp-label-answer">
-                    <input type="checkbox" name="myCheckbox" className="checkbox" value=""/>
-                    <p className="quiz-comp-form-p">reponse 3</p>
-                </label>
-                <label className="quiz-comp-label-answer">
-                    <input type="checkbox" name="myCheckbox" className="checkbox" value=""/>
-                    <p className="quiz-comp-form-p">reponse 4</p>
-                </label>
-                <input type="submit" value="Envoyer" className="quiz-comp-submit"/>
-                </form>
+                        <form className="quiz-comp-form">
+                        <img className="quiz-image"src={image}/>
+                        <div className='quiz-questions-wrapper'>
+                        <label key={id} className="quiz-comp-title">{question}</label>
+                        <label className="quiz-comp-label-answer">
+                            <input type="radio" name="myCheckbox" className="checkbox" value={answer1Score}/>
+                            <p className="quiz-comp-form-p">{answer1}</p>
+                         </label>
+                         <label className="quiz-comp-label-answer">
+                            <input type="radio" name="myCheckbox" className="checkbox" value={answer2Score}/>
+                            <p className="quiz-comp-form-p">{answer2}</p>
+                         </label>
+                         <label className="quiz-comp-label-answer">
+                            <input type="radio" name="myCheckbox" className="checkbox" value={answer3Score}/>
+                            <p className="quiz-comp-form-p">{answer3}</p>
+                         </label>
+                         <label className="quiz-comp-label-answer">
+                            <input type="radio" name="myCheckbox" className="checkbox" value={answer4Score}/>
+                            <p className="quiz-comp-form-p">{answer4}</p>
+                         </label>  
+                         <input type="submit" value="suivant" className="quiz-comp-submit"/>
+                         </div>       
+                         </form>     
             </div>
         </div>
     )
