@@ -4,29 +4,41 @@ import QuizComponent from "./QuizComponent";
 import './quiz.scss';
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
+import AnimalTotemComponent from "./AnimalTotem";
 
 function Quiz(){
 
     const [questionsData, setQuestionsData] = useState([]);
     const [selectedAnswers, setSelectedAnswers] = useState({});
     const [selectedAnswersArray, setSelectedAnswersArray] = useState([]);
-
-    let dataNumber;
+    const [animalTotems, setAnimalTotems] = useState([]);
+    const [chosenAnimal, setChosenAnimal] = useState(null);
 
     const getQuiz = async () => {
        try{
            const result = await axios.get("https://skyblag-back.onrender.com/api/getAllQuiz");
            setQuestionsData(result.data)
            console.log(result.data)
-           dataNumber = result.data.length;
        } 
        catch(error){
            console.log(error)
        }
    }
 
+   const getAnimalTotem = async () => {
+    try{
+        const result = await axios.get('https://skyblag-back.onrender.com/api/getAllAnimalsTotem');
+        setAnimalTotems(result.data)
+        console.log(result.data)
+    }
+    catch(error){
+        console.log(error)
+    }
+   }
+
    useEffect(() => {
-       getQuiz()
+       getQuiz();
+       getAnimalTotem();
    }, [])
 
    const handleAnswerChange = (id, answerScore) => {
@@ -46,22 +58,23 @@ function Quiz(){
     console.log('tableau:',selectedAnswersArray)
     numberArray = selectedAnswersArray.map(Number).reduce((total, current) => total +current, 0);
     console.log(numberArray)
-    AnimalTotem();
+    setChosenAnimal(AnimalTotem());
    }    
 
+   let animalChoose;
    function AnimalTotem(){
-    if(numberArray <=5){
-        alert('ton animal totem est la loutre')
-
-    } else if(numberArray >5 && numberArray <=10){
-        alert("ton anumal totem est la chouette")
+    if(numberArray ==8){
+    animalChoose =  animalTotems.filter((animalChosen) => ( animalChosen.name.includes('panda')))
+        console.log(animalChoose)
+    } else if(numberArray >8 && numberArray <=10){
+    animalChoose =  animalTotems.filter((animalChosen) => ( animalChosen.name.includes('poney')))
+        console.log(animalChoose)
     } else if(numberArray > 10 && numberArray <=15){
        alert("ton animal totem est la poubelle")
     } else if(numberArray > 15 && numberArray <=20){
         alert("ton animal totem est le rat dégueu et pas le rat d'égoût")
     }
    } 
-
 
     return(
         <div className="quiz-wrapper">
@@ -76,7 +89,19 @@ function Quiz(){
                     />
                 ))
             }
+          
+         
             <button onClick={onSubmit}>envoyer</button>
+            {chosenAnimal &&(
+                <AnimalTotemComponent
+                    name={chosenAnimal.name}
+                    image={chosenAnimal.image}
+                    description1={chosenAnimal.description1}
+                    description2={chosenAnimal.description2}
+                    conseil={chosenAnimal.conseil}
+                />
+            )
+         }
             <Footer/>
         </div>
     )

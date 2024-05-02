@@ -1,0 +1,26 @@
+.animal-wrapper{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border: antiquewhite;
+    margin: 10px;
+    background-color: white;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.animal-img{
+    width:80%;
+    margin: 10px 0;
+}
+
+.animal-p{
+    margin: 5px;
+}
+
+.animal-conseil{
+    margin:5px;
+    font-weight: bold;
+}
