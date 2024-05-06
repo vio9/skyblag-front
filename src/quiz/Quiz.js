@@ -5,7 +5,7 @@ import './quiz.scss';
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import AnimalTotemComponent from "./AnimalTotem";
-
+import categoriesAnimals from "../data/categoriesAnimals";
 function Quiz(){
 
     const [questionsData, setQuestionsData] = useState([]);
@@ -61,21 +61,17 @@ function Quiz(){
     setChosenAnimal(AnimalTotem());
    }    
 
-   let animalChoose;
-   function AnimalTotem(){
-    if(numberArray ==8){
-    animalChoose =  animalTotems.filter((animalChosen) => ( animalChosen.name.includes('panda')))
-        console.log(animalChoose)
-    } else if(numberArray >8 && numberArray <=10){
-    animalChoose =  animalTotems.filter((animalChosen) => ( animalChosen.name.includes('poney')))
-        console.log(animalChoose)
-    } else if(numberArray > 10 && numberArray <=15){
-       alert("ton animal totem est la poubelle")
-    } else if(numberArray > 15 && numberArray <=20){
-        alert("ton animal totem est le rat dégueu et pas le rat d'égoût")
-    }
+
+   function AnimalTotem(numberArray){
+    const oneCategorieAnimal = categoriesAnimals.find(cat => numberArray >= cat.min && numberArray <= cat.max);
+    if(!cat) return [];
+ 
+    const animalName = cat.animal;
+    const animalChoose = animalTotem.filter(animal => animal.name.includes(animalName));
+    return animalChoose 
    } 
 
+   console.log("chosen anilmal value : ",chosenAnimal)
     return(
         <div className="quiz-wrapper">
             <Header/>
@@ -92,15 +88,17 @@ function Quiz(){
           
          
             <button onClick={onSubmit}>envoyer</button>
-            {chosenAnimal &&(
+         {
+            chosenAnimal ?
+            chosenAnimal.map((item) => (
                 <AnimalTotemComponent
-                    name={chosenAnimal.name}
-                    image={chosenAnimal.image}
-                    description1={chosenAnimal.description1}
-                    description2={chosenAnimal.description2}
-                    conseil={chosenAnimal.conseil}
+                    name={item.name}
+                    image={item.image}
+                    description1={item.description1}
+                    description2={item.description2}
+                    conseil={item.conseil}
                 />
-            )
+            )) : <p>coucou</p>
          }
             <Footer/>
         </div>
@@ -108,3 +106,27 @@ function Quiz(){
 }
 
 export default Quiz;
+
+
+
+    // let animalChoose;
+    // if(numberArray ==8){
+    // animalChoose =  animalTotems.filter((animalChosen) => ( animalChosen.name.includes('rat-taupe')))
+    //     console.log(animalChoose)
+    // } else if(numberArray >8 && numberArray <=10){
+    // animalChoose =  animalTotems.filter((animalChosen) => ( animalChosen.name.includes('scolopendre')))
+    //     console.log(animalChoose)
+    // } else if(numberArray > 10 && numberArray <=13){
+    //     animalChoose =  animalTotems.filter((animalChosen) => ( animalChosen.name.includes('rat-taupe')))
+    // } else if(numberArray > 13 && numberArray <=16){
+    //     animalChoose =  animalTotems.filter((animalChosen) => ( animalChosen.name.includes('chat')))
+    // } else if(numberArray > 16 && numberArray <=19){
+    //     animalChoose =  animalTotems.filter((animalChosen) => ( animalChosen.name.includes('poney')))
+    // }
+    // else if(numberArray > 19 && numberArray <=21){
+    //     animalChoose =  animalTotems.filter((animalChosen) => ( animalChosen.name.includes('komodor')))
+    // }
+    // else if(numberArray > 21 && numberArray <=24){
+    //     animalChoose =  animalTotems.filter((animalChosen) => ( animalChosen.name.includes('panda')))
+    // }
+    // return animalChoose;
