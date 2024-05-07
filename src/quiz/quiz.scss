@@ -14,3 +14,12 @@
     color: rgb(255, 255, 255);
     margin-bottom: 1em;
 }
+
+@media screen and (max-width: 768px){
+    .quiz-title {
+        font-size: 1.6em;
+        margin-bottom: 1em;
+        text-align: center;
+      }
+ 
+}   

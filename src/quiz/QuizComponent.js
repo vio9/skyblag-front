@@ -27,6 +27,7 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                             value={answer1Score} 
                             checked={selectedValue === answer1Score}
                             onChange={handleRadioChange}
+                            required
                             />
                             <p className="quiz-comp-form-p">{answer1},{answer1Score}</p>
                          </label>
@@ -38,6 +39,7 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                             value={answer2Score}
                             checked={selectedValue === answer2Score}
                             onChange={handleRadioChange}
+                            required
                             />
                             <p className="quiz-comp-form-p">{answer2} {answer2Score}</p>
                          </label>
@@ -49,6 +51,7 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                             value={answer3Score}
                             checked={selectedValue === answer3Score}
                             onChange={handleRadioChange}
+                            required
                             />
                             <p className="quiz-comp-form-p">{answer3} {answer3Score}</p>
                          </label>
@@ -60,6 +63,7 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                             value={answer4Score}
                             checked={selectedValue === answer4Score}
                             onChange={handleRadioChange}
+                            required
                             />
                             <p className="quiz-comp-form-p">{answer4} {answer4Score}</p>
                          </label>  
