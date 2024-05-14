@@ -6,18 +6,37 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
     
   const [selectedValue, setSelectedValue ] = useState('');
 
+
   const handleRadioChange = (e) => {
   const answerScore = e.target.value;
   setSelectedValue(answerScore)
   onAnswerChange(id, answerScore)
   }
+
+  const questionsColors = {
+    1:"indian-red",
+    2:"light-coral",
+    3:"violet-red",
+    4:"fire-brick",
+    5:"crimson",
+    6: "medium-purple",
+    7:"medium-blue",
+    8:"turquoise",
+    9:"dark-see",
+    10:"light-see"
+  }
     
+  const getQuestionsColorClass = (questionNumber) => {
+        return questionsColors[questionNumber];
+  }
+  const questionColorClass = getQuestionsColorClass(numeroQuestion);
+
     return(
         <div className="wrapper-quiz-comp">
             <div className="quiz-comp-wrapper">
                         <form className="quiz-comp-form">
                         <img className="quiz-image"src={image}/>
-                        <div className='quiz-questions-wrapper'>
+                        <div className={`quiz-questions-wrapper ${questionColorClass}`}>
                         <label key={id} className="quiz-comp-title">{numeroQuestion}: {question}</label>
                         <label className="quiz-comp-label-answer">
                             <input 

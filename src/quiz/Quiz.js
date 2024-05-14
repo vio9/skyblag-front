@@ -62,6 +62,7 @@ function Quiz(){
     const chosenAnimalResult = AnimalTotemCalculate(numberArray);
     console.log(numberArray)
     setChosenAnimal(chosenAnimalResult);
+    console.log('selected array a la fin: ',selectedAnswersArray);
    }    
 
    function AnimalTotemCalculate(numberArray){
@@ -89,7 +90,7 @@ function Quiz(){
           
          
           {
-            disabled ? <button disabled onClick={onSubmit}>envoyer</button> : <button onClick={onSubmit}>envoyer</button>
+            disabled ? <button className="quiz-submit-button" disabled onClick={onSubmit}>envoyer</button> : <button className="quiz-submit-button" onClick={onSubmit}>envoyer</button>
           }  
          {
             chosenAnimal ?
