@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./quiz-component.scss";
+import questionsColors from "../data/questionsColor";
 
 function QuizComponent({image, question, answer1, answer1Score, answer2, answer2Score,
     answer3, answer3Score, answer4, answer4Score, id, numeroQuestion, onAnswerChange}){
@@ -13,19 +14,7 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
   onAnswerChange(id, answerScore)
   }
 
-  const questionsColors = {
-    1:"indian-red",
-    2:"light-coral",
-    3:"violet-red",
-    4:"fire-brick",
-    5:"crimson",
-    6: "medium-purple",
-    7:"medium-blue",
-    8:"turquoise",
-    9:"dark-see",
-    10:"light-see"
-  }
-    
+
   const getQuestionsColorClass = (questionNumber) => {
         return questionsColors[questionNumber];
   }
@@ -37,7 +26,7 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                         <form className="quiz-comp-form">
                         <img className="quiz-image"src={image}/>
                         <div className={`quiz-questions-wrapper ${questionColorClass}`}>
-                        <label key={id} className="quiz-comp-title">{numeroQuestion}: {question}</label>
+                        <label key={id} className="quiz-comp-title">{numeroQuestion}. {question}</label>
                         <label className="quiz-comp-label-answer">
                             <input 
                             type="radio" 

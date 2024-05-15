@@ -1,13 +1,13 @@
 const categoriesAnimals = [
-    { min: 10, max: 13, animal: 'rat-taupe' },
-    { min: 14, max: 17, animal: 'scolopendre' },
-    { min: 18, max: 20, animal: 'rat-taupe' },
+    { min: 10, max: 12, animal: 'rat-taupe' },
+    { min: 13, max: 16, animal: 'scolopendre' },
+    { min: 17, max: 20, animal: 'Capybara' },
     { min: 21, max: 23, animal: 'chat' },
-    { min: 24, max: 27, animal: 'poney' },
-    { min: 28, max: 30, animal: 'komodor' },
-    { min: 31, max: 33, animal: 'panda' },
-    { min: 34, max: 36, animal: 'athéna'},
-    { min: 37, max:38, animal:'Ornithorynque'}
+    { min: 24, max: 26, animal: 'poney' },
+    { min: 27, max: 29, animal: 'komodor' },
+    { min: 30, max: 32, animal: 'panda' },
+    { min: 33, max: 35, animal: 'athéna'},
+    { min: 36, max:40, animal:'Ornithorynque'}
 
 ]
 

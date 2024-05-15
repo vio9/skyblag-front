@@ -8,13 +8,22 @@
     background-color: #fff;
     padding:20px;
     border-radius: 17px;
+    background:
+    calc( .9*20px) calc( .9*20px)/calc(2*20px) calc(2*20px) conic-gradient(at 20% 20%,#0000 75%,#ffffff 0),
+    calc(-.1*20px) calc(-.1*20px)/calc(2*20px) calc(2*20px) conic-gradient(at 20% 20%,#0000 75%,#ffffff 0),
+    calc( .7*20px) calc( .7*20px)/calc(2*20px) calc(2*20px) conic-gradient(at 40% 40%,#0000 75%,#fbfbfb 0),
+    calc(-.3*20px) calc(-.3*20px)/calc(2*20px) calc(2*20px) conic-gradient(at 40% 40%,#0000 75%,#fbfbfb 0),
+    conic-gradient(from 90deg at 20% 20%,#ffffff 25%,#fbfbfb 0) 
+     0 0/20px 20px;
+
 }
 
 .quiz-comp-title{
-    font-size: 1.3em;
+    font-size: 1.6em;
     margin-bottom: 0.5em;
     font-weight: bold;
     margin-left: 4px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif
 }
 
 .quiz-comp-answer{
@@ -29,6 +38,7 @@
     padding-left:10px;
     font-size: 15px;
     margin: 4px 0;
+    font-family:  Calibri, 'Trebuchet MS', sans-serif
 }
 
 .quiz-comp-label-answer{
@@ -54,45 +64,49 @@
 
 
 .indian-red{
-    color:#CD5C5C;
+    color:#CD3F3D;
 }
 
-.light-coral{
-    color:#F08080;
+.light-sky{
+    color:#7f84c1;;
 }
 .violet-red{
-    color: 	#DB7093
+    color: 	#ce071e;
 }
 
 .medium-purple{
-    color:#b4277c;
+    color:#fe208d;
 }
 
-.crimson{
-    color:#DC143C;
+.crimson-green{
+    color:#24b20e;
 }
 
 .fire-brick{
-    color:#B22222;
+    color:#eb9934;
 }
 
-.light-see{
-    color:#278670;;
+.light-brown{
+    color:#a98975;
 }
 
 .dark-see{
-    color:#008080;
+    color:#649fbf;
 }
 
-.turquoise{
-    color:#338091;
+.dark-turquoise{
+    color:#1f5a9c;
 }
 
 .medium-blue{
-    color:#334791
+    color:#2e2c37;
 }
 
 @media screen and (max-width: 768px){
+
+    .quiz-questions-wrapper{
+        margin:0;
+    }
     .wrapper-quiz-comp {
         width: 98%;
     }
@@ -103,7 +117,7 @@
 
     .quiz-image{
         max-width:100%;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
 
     }
 
@@ -111,5 +125,9 @@
         padding-left: 5px;
         font-size: 15px;
       }
+    
+      .quiz-comp-title{
+        font-size: 1.5em;
+     }
 
 }
