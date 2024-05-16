@@ -22,6 +22,17 @@
     background-color: aliceblue;
     border-radius: 5px;
     font-size: 16px;
+    cursor: pointer;
+}
+.quiz-submit-button:hover{
+   background-color: rgb(171, 178, 184);
+}
+.quiz-submit-button-disabled{
+    background-color: aliceblue;
+    color:rgb(190, 195, 199);
+    border-radius: 5px;
+    border:none;
+    padding: 6px 12px;
 }
 
 @media screen and (max-width: 768px){

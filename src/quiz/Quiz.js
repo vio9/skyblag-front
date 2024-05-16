@@ -14,6 +14,7 @@ function Quiz(){
     const [animalTotems, setAnimalTotems] = useState([]);
     const [chosenAnimal, setChosenAnimal] = useState(null);
     const [disabled, setDisabled] = useState(true);
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
     const getQuiz = async () => {
        try{
@@ -60,7 +61,7 @@ function Quiz(){
    const onSubmit = () => {
     numberArray = selectedAnswersArray.map(Number).reduce((total, current) => total +current, 0);
     const chosenAnimalResult = AnimalTotemCalculate(numberArray);
-    console.log(numberArray)
+    console.log('number array:',numberArray)
     setChosenAnimal(chosenAnimalResult);
     console.log('selected array a la fin: ',selectedAnswersArray);
    }    
@@ -90,7 +91,7 @@ function Quiz(){
           
          
           {
-            disabled ? <button className="quiz-submit-button" disabled onClick={onSubmit}>envoyer</button> : <button className="quiz-submit-button" onClick={onSubmit}>envoyer</button>
+            disabled ? <button className="quiz-submit-button-disabled" disabled onClick={onSubmit}>envoyer</button> : <button className="quiz-submit-button" onClick={onSubmit}>envoyer</button>
           }  
          {
             chosenAnimal ?

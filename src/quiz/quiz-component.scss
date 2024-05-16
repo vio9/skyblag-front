@@ -102,6 +102,24 @@
     color:#2e2c37;
 }
 
+.next{
+    width: 5em;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin:1em 0 0 4px;
+}
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 0 4px 9.6px;
+     border-color: transparent transparent transparent #9093a2;
+  
+}
+
 @media screen and (max-width: 768px){
 
     .quiz-questions-wrapper{

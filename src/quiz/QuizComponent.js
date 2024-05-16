@@ -22,7 +22,6 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
 
     return(
         <div className="wrapper-quiz-comp">
-            <div className="quiz-comp-wrapper">
                         <form className="quiz-comp-form">
                         <img className="quiz-image"src={image}/>
                         <div className={`quiz-questions-wrapper ${questionColorClass}`}>
@@ -75,11 +74,12 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                             />
                             <p className="quiz-comp-form-p">{answer4} {answer4Score}</p>
                          </label>  
-                         </div>       
-                         </form>     
+                         <button className={`next ${questionColorClass}`}>Next <span className={`triangle ${questionColorClass}`}></span></button>   
+                    </div>
+                </form>  
             </div>
         
-        </div>
+   
     )
 }
 
