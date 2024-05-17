@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState} from "react";
 import "./quiz-component.scss";
 import questionsColors from "../data/questionsColor";
 
 function QuizComponent({image, question, answer1, answer1Score, answer2, answer2Score,
-    answer3, answer3Score, answer4, answer4Score, id, numeroQuestion, onAnswerChange}){
+    answer3, answer3Score, answer4, answer4Score, id, 
+    numeroQuestion, onAnswerChange, handleNextQuestion, displayNextButton}){
     
   const [selectedValue, setSelectedValue ] = useState('');
 
@@ -14,11 +15,16 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
   onAnswerChange(id, answerScore)
   }
 
-
+ 
   const getQuestionsColorClass = (questionNumber) => {
         return questionsColors[questionNumber];
   }
   const questionColorClass = getQuestionsColorClass(numeroQuestion);
+
+  const handleNextQuestionClick = () => {
+   setSelectedValue('');
+   handleNextQuestion();
+ };
 
     return(
         <div className="wrapper-quiz-comp">
@@ -74,7 +80,11 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                             />
                             <p className="quiz-comp-form-p">{answer4} {answer4Score}</p>
                          </label>  
-                         <button className={`next ${questionColorClass}`}>Next <span className={`triangle ${questionColorClass}`}></span></button>   
+                         {
+                           displayNextButton ?  <button type="button" onClick={handleNextQuestionClick} className={`next ${questionColorClass}`}>
+                           Next <span className={`triangle ${questionColorClass}`}></span></button>   : null
+                         }
+                      
                     </div>
                 </form>  
             </div>

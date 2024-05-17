@@ -15,11 +15,14 @@ function Quiz(){
     const [chosenAnimal, setChosenAnimal] = useState(null);
     const [disabled, setDisabled] = useState(true);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [dataLoad, setDataLoad] = useState(false);
+    const [displayNextButton, setDisplayNextButton] = useState(true);
 
     const getQuiz = async () => {
        try{
            const result = await axios.get("https://skyblag-back.onrender.com/api/getAllQuiz");
            setQuestionsData(result.data)
+           setDataLoad(true);
        } 
        catch(error){
            console.log(error)
@@ -30,6 +33,7 @@ function Quiz(){
     try{
         const result = await axios.get('https://skyblag-back.onrender.com/api/getAllAnimalsTotem');
         setAnimalTotems(result.data)
+  
     }
     catch(error){
         console.log(error)
@@ -52,6 +56,7 @@ function Quiz(){
         console.log("update answers", updatedSelectedAnswersArray);
         if(updatedSelectedAnswersArray.length === 10){
             setDisabled(false);
+            setDisplayNextButton(false);
         }
         return updatedSelectedAnswersArray;
     });
@@ -61,7 +66,6 @@ function Quiz(){
    const onSubmit = () => {
     numberArray = selectedAnswersArray.map(Number).reduce((total, current) => total +current, 0);
     const chosenAnimalResult = AnimalTotemCalculate(numberArray);
-    console.log('number array:',numberArray)
     setChosenAnimal(chosenAnimalResult);
     console.log('selected array a la fin: ',selectedAnswersArray);
    }    
@@ -75,21 +79,22 @@ function Quiz(){
     return animalChoose;
    } 
 
+   const handleNextQuestion =()=> {
+        setCurrentQuestionIndex((prevQuestion) => prevQuestion +1);
+   }
+ 
     return(
         <div className="quiz-wrapper">
             <Header/>
             <h1 className="quiz-title">Découvrez votre animal totem</h1>
-            {
-                questionsData.map((item, index) => (
-                    <QuizComponent key={index} 
-                        {...item} 
-                        index={index}
-                        onAnswerChange={handleAnswerChange}
-                    />
-                ))
-            }
-          
-         
+            { dataLoad && (
+                <QuizComponent
+                {...questionsData[currentQuestionIndex]}
+                onAnswerChange={handleAnswerChange}
+                handleNextQuestion={handleNextQuestion}
+                displayNextButton={displayNextButton}
+                />
+            )}
           {
             disabled ? <button className="quiz-submit-button-disabled" disabled onClick={onSubmit}>envoyer</button> : <button className="quiz-submit-button" onClick={onSubmit}>envoyer</button>
           }  
@@ -111,3 +116,13 @@ function Quiz(){
 }
 
 export default Quiz;
+
+
+        // questionsData.map((item, index) => (
+                //     <QuizComponent key={index} 
+                //         {...item} 
+                //         index={index}
+                //         onAnswerChange={handleAnswerChange}
+                //         handleNextQuestion={handleNextQuestion}
+                //     />
+                // ))

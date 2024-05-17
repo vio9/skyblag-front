@@ -35,3 +35,16 @@
       }
  
 }   
+
+.animal-close{
+    border:none;
+    background-color: rgb(180, 168, 236);
+    border-radius:8px;
+    padding: 6px 10px;
+    margin:5px;
+    cursor: pointer;
+}
+
+.close-animal{
+    display:none;
+}
