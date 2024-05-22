@@ -17,6 +17,7 @@ function Quiz(){
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [dataLoad, setDataLoad] = useState(false);
     const [displayNextButton, setDisplayNextButton] = useState(true);
+    const [isAppears, setIsAppears] = useState(false);
 
     const getQuiz = async () => {
        try{
@@ -68,6 +69,7 @@ function Quiz(){
     const chosenAnimalResult = AnimalTotemCalculate(numberArray);
     setChosenAnimal(chosenAnimalResult);
     console.log('selected array a la fin: ',selectedAnswersArray);
+    setIsAppears(true);
    }    
 
    function AnimalTotemCalculate(numberArray){
@@ -82,6 +84,8 @@ function Quiz(){
    const handleNextQuestion =()=> {
         setCurrentQuestionIndex((prevQuestion) => prevQuestion +1);
    }
+
+
  
     return(
         <div className="quiz-wrapper">
@@ -107,6 +111,7 @@ function Quiz(){
                     description1={item.description1}
                     description2={item.description2}
                     conseil={item.conseil}
+                    isAppears={isAppears}
                 />
             )) : null
          }
@@ -117,12 +122,3 @@ function Quiz(){
 
 export default Quiz;
 
-
-        // questionsData.map((item, index) => (
-                //     <QuizComponent key={index} 
-                //         {...item} 
-                //         index={index}
-                //         onAnswerChange={handleAnswerChange}
-                //         handleNextQuestion={handleNextQuestion}
-                //     />
-                // ))
