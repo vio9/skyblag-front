@@ -92,16 +92,21 @@ function Quiz(){
             <Header/>
             <h1 className="quiz-title">Découvrez votre animal totem</h1>
             { dataLoad && (
+                 <div className="test">
                 <QuizComponent
                 {...questionsData[currentQuestionIndex]}
                 onAnswerChange={handleAnswerChange}
                 handleNextQuestion={handleNextQuestion}
                 displayNextButton={displayNextButton}
                 />
+                 {
+            disabled ? null : <button className="quiz-submit-button" onClick={onSubmit}>envoyer</button>
+          } 
+            </div>
             )}
-          {
-            disabled ? <button className="quiz-submit-button-disabled" disabled onClick={onSubmit}>envoyer</button> : <button className="quiz-submit-button" onClick={onSubmit}>envoyer</button>
-          }  
+          {/* {
+            disabled ? null : <button className="quiz-submit-button" onClick={onSubmit}>envoyer</button>
+          }   */}
          {
             chosenAnimal ?
             chosenAnimal.map((item) => (
@@ -122,3 +127,4 @@ function Quiz(){
 
 export default Quiz;
 
+//<button className="quiz-submit-button-disabled" disabled onClick={onSubmit}>envoyer</button>

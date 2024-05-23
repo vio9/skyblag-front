@@ -16,9 +16,10 @@ const  closeAnimal = () => {
 if(isAppears){
     confettiRef.current = new JSConfetti({canva: canvaRef.current})
     confettiRef.current.addConfetti({
-        emojis: ['🦜', '🐕', '🦦', '🦊'],
+        emojis: ['🐬', '🐊', '🦆', '🐏', '🐒', '🐆', '🐠'],
         confettiRadius:5,
-        confettiNumber: 42
+        emojiSize: 100,
+        confettiNumber: 60
     });
 }
 

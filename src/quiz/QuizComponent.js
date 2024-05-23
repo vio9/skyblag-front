@@ -14,7 +14,6 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
   setSelectedValue(answerScore)
   onAnswerChange(id, answerScore)
   }
-
  
   const getQuestionsColorClass = (questionNumber) => {
         return questionsColors[questionNumber];
@@ -89,7 +88,6 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                 </form>  
             </div>
         
-   
     )
 }
 
