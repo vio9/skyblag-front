@@ -1,11 +1,10 @@
 .wrapper-quiz-comp{
-    width:70%;
+    width:75%;
 }
-
 
 .quiz-comp-form{
     display: flex;
-    margin: 10px 0;
+    margin: 24px 0 1em 0;
     background-color: #fff;
     padding:20px;
     border-radius: 17px;
@@ -21,7 +20,7 @@
 
 .quiz-comp-title{
     font-size: 1.6em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     font-weight: bold;
     margin-left: 4px;
     font-family: Calibri, 'Trebuchet MS', sans-serif
@@ -53,7 +52,7 @@
 }
 
 .quiz-image{
-    max-width: 40%;
+    max-width: 50%;
     display: flex;
 }
 
@@ -104,13 +103,22 @@
 }
 
 .next{
-    width: 5em;
+    width: 6em;
     border: none;
     padding: 5px;
     cursor: pointer;
     border-radius: 6px;
-    margin:1em 0 0 4px;
+    margin:2.5em 0 0 4px;
+    font-size: 0.9em;
 }
+
+.next:hover{  
+    animation-name: pulse;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+
+}
+
 .triangle {
     display: inline-block;
     width: 0;
@@ -118,8 +126,28 @@
     border-style: solid;
     border-width: 4px 0 4px 9.6px;
      border-color: transparent transparent transparent #9093a2;
-  
 }
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    }
+    @keyframes pulse {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    } 
+  
 
 @media screen and (max-width: 768px){
 

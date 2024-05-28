@@ -34,7 +34,6 @@ function Quiz(){
     try{
         const result = await axios.get('https://skyblag-back.onrender.com/api/getAllAnimalsTotem');
         setAnimalTotems(result.data)
-  
     }
     catch(error){
         console.log(error)
@@ -54,7 +53,6 @@ function Quiz(){
     setSelectedAnswersArray(prevSelectedAnswersArray => {
         const updatedSelectedAnswersArray = [...prevSelectedAnswersArray];
         updatedSelectedAnswersArray.push(answerScore);
-        console.log("update answers", updatedSelectedAnswersArray);
         if(updatedSelectedAnswersArray.length === 10){
             setDisabled(false);
             setDisplayNextButton(false);
@@ -68,12 +66,13 @@ function Quiz(){
     numberArray = selectedAnswersArray.map(Number).reduce((total, current) => total +current, 0);
     const chosenAnimalResult = AnimalTotemCalculate(numberArray);
     setChosenAnimal(chosenAnimalResult);
-    console.log('selected array a la fin: ',selectedAnswersArray);
     setIsAppears(true);
    }    
 
    function AnimalTotemCalculate(numberArray){
-    const oneCategorieAnimal = categoriesAnimals.find(categorie => numberArray >= categorie.min && numberArray <= categorie.max);
+    const oneCategorieAnimal = categoriesAnimals.find(
+        categorie => numberArray >= categorie.min && numberArray <= categorie.max
+        );
     if(!oneCategorieAnimal) return [];
  
     const animalName = oneCategorieAnimal.animal;
@@ -85,8 +84,16 @@ function Quiz(){
         setCurrentQuestionIndex((prevQuestion) => prevQuestion +1);
    }
 
+   const resetQuiz = () => {
+    setCurrentQuestionIndex(0);
+    setSelectedAnswers({});
+    setSelectedAnswersArray([]);
+    setChosenAnimal(null);
+    setDisabled(true);
+    setDisplayNextButton(true);
+    setIsAppears(false);
+    }
 
- 
     return(
         <div className="quiz-wrapper">
             <Header/>
@@ -104,9 +111,6 @@ function Quiz(){
           } 
             </div>
             )}
-          {/* {
-            disabled ? null : <button className="quiz-submit-button" onClick={onSubmit}>envoyer</button>
-          }   */}
          {
             chosenAnimal ?
             chosenAnimal.map((item) => (
@@ -117,6 +121,7 @@ function Quiz(){
                     description2={item.description2}
                     conseil={item.conseil}
                     isAppears={isAppears}
+                    onClose={resetQuiz}
                 />
             )) : null
          }
@@ -126,5 +131,3 @@ function Quiz(){
 }
 
 export default Quiz;
-
-//<button className="quiz-submit-button-disabled" disabled onClick={onSubmit}>envoyer</button>
