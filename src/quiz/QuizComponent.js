@@ -8,7 +8,6 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
     
   const [selectedValue, setSelectedValue ] = useState('');
 
-
   const handleRadioChange = (e) => {
   const answerScore = e.target.value;
   setSelectedValue(answerScore)
@@ -23,6 +22,7 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
   const handleNextQuestionClick = () => {
    setSelectedValue('');
    handleNextQuestion();
+
  };
 
     return(
@@ -34,56 +34,60 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                         <label className="quiz-comp-label-answer">
                             <input 
                             type="radio" 
-                            name={`myRadioGroup_${id}`} 
+                            name={`myRadioGroup_${id}`}            
                             className="checkbox" 
                             value={answer1Score} 
                             checked={selectedValue === answer1Score}
                             onChange={handleRadioChange}
-                            required
                             />
                             <p className="quiz-comp-form-p">{answer1},{answer1Score}</p>
                          </label>
 
                          <label className="quiz-comp-label-answer">
-                            <input type="radio" 
+                            <input type="radio"                         
                             name={`myRadioGroup_${id}`} 
                             className="checkbox" 
                             value={answer2Score}
                             checked={selectedValue === answer2Score}
                             onChange={handleRadioChange}
-                            required
                             />
                             <p className="quiz-comp-form-p">{answer2} {answer2Score}</p>
                          </label>
 
                          <label className="quiz-comp-label-answer">
                             <input type="radio" 
-                            name={`myRadioGroup_${id}`} 
+                             name={`myRadioGroup_${id}`}             
                             className="checkbox" 
                             value={answer3Score}
                             checked={selectedValue === answer3Score}
                             onChange={handleRadioChange}
-                            required
                             />
                             <p className="quiz-comp-form-p">{answer3} {answer3Score}</p>
                          </label>
 
                          <label className="quiz-comp-label-answer">
                             <input type="radio" 
-                           name={`myRadioGroup_${id}`} 
+                            name={`myRadioGroup_${id}`} 
                             className="checkbox" 
                             value={answer4Score}
                             checked={selectedValue === answer4Score}
                             onChange={handleRadioChange}
-                            required
                             />
                             <p className="quiz-comp-form-p">{answer4} {answer4Score}</p>
                          </label>  
                          {
-                           displayNextButton ?  <button type="button" onClick={handleNextQuestionClick} className={`next ${questionColorClass}`}>
-                           Next <span className={`triangle ${questionColorClass}`}></span></button>   : null
-                         }
-                      
+                          displayNextButton ? (
+                            selectedValue ? (
+                              <button type="button" onClick={handleNextQuestionClick} className={`next ${questionColorClass}`}>
+                                Next <span className={`triangle ${questionColorClass}`}></span>
+                              </button>
+                            ) : (
+                              <button type="button" disabled className={`next-disabled ${questionColorClass}`}>
+                                Next <span className={`triangle ${questionColorClass}`}></span>
+                              </button>
+                            )
+                          ) : null
+                        }
                     </div>
                 </form>  
             </div>
@@ -92,3 +96,15 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
 }
 
 export default QuizComponent;
+
+
+// {
+//   displayNextButton && selectedValue ?  <button type="button" onClick={handleNextQuestionClick} className={`next ${questionColorClass}`}>
+//   Next <span className={`triangle ${questionColorClass}`}></span></button>  
+//   :
+//   <>
+//   <button type="button" disabled onClick={handleNextQuestionClick} className={`next ${questionColorClass}`}>
+//   Next <span className={`triangle ${questionColorClass}`}></span></button> 
+//   <p>veuillez remplir un champ</p>
+//   </>
+// }

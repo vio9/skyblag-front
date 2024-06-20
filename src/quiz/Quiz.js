@@ -67,6 +67,7 @@ function Quiz(){
     const chosenAnimalResult = AnimalTotemCalculate(numberArray);
     setChosenAnimal(chosenAnimalResult);
     setIsAppears(true);
+    console.log(chosenAnimalResult)
    }    
 
    function AnimalTotemCalculate(numberArray){
@@ -85,13 +86,7 @@ function Quiz(){
    }
 
    const resetQuiz = () => {
-    setCurrentQuestionIndex(0);
-    setSelectedAnswers({});
-    setSelectedAnswersArray([]);
-    setChosenAnimal(null);
-    setDisabled(true);
-    setDisplayNextButton(true);
-    setIsAppears(false);
+    window.location.reload();
     }
 
     return(
