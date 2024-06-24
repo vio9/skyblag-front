@@ -50,6 +50,7 @@ function Quiz(){
        ...prevSelectedAnswers,
       [id]: answerScore
     }));
+    
     setSelectedAnswersArray(prevSelectedAnswersArray => {
         const updatedSelectedAnswersArray = [...prevSelectedAnswersArray];
         updatedSelectedAnswersArray.push(answerScore);

@@ -40,7 +40,7 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                             checked={selectedValue === answer1Score}
                             onChange={handleRadioChange}
                             />
-                            <p className="quiz-comp-form-p">{answer1},{answer1Score}</p>
+                            <p className="quiz-comp-form-p">{answer1}</p>
                          </label>
 
                          <label className="quiz-comp-label-answer">
@@ -51,7 +51,7 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                             checked={selectedValue === answer2Score}
                             onChange={handleRadioChange}
                             />
-                            <p className="quiz-comp-form-p">{answer2} {answer2Score}</p>
+                            <p className="quiz-comp-form-p">{answer2}</p>
                          </label>
 
                          <label className="quiz-comp-label-answer">
@@ -62,7 +62,7 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                             checked={selectedValue === answer3Score}
                             onChange={handleRadioChange}
                             />
-                            <p className="quiz-comp-form-p">{answer3} {answer3Score}</p>
+                            <p className="quiz-comp-form-p">{answer3}</p>
                          </label>
 
                          <label className="quiz-comp-label-answer">
@@ -73,7 +73,7 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                             checked={selectedValue === answer4Score}
                             onChange={handleRadioChange}
                             />
-                            <p className="quiz-comp-form-p">{answer4} {answer4Score}</p>
+                            <p className="quiz-comp-form-p">{answer4}</p>
                          </label>  
                          {
                           displayNextButton ? (
