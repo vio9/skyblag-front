@@ -1,19 +1,19 @@
 .animal-wrapper{
     width: 100%;
-	height:100vh;
+	// height:100vh;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.549);
+    // background-color: rgba(0, 0, 0, 0.549);
     align-items: center;
     padding: 10px 0;
-    position: absolute;
-    top:0em;
+    // position: absolute;
+    // top:0em;
     animation: myAnim 1s ease 0s 1 normal forwards;
-	backdrop-filter: blur(8px);
+	// backdrop-filter: blur(8px);
 }
 
 .under-wrapper{
-	width:60%;
+	width:50%;
 	background-color: rgb(255, 255, 255);
 	display: flex;
 	flex-direction: column;
@@ -23,16 +23,16 @@
 }
 
 .animal-img{
-    width:64%;
+    width:85%;
     margin: 10px 0;
 }
 
-.animal-p{
+.animal-p, .animal-conseil{
     margin: 5px;
+	width:85%;
 }
 
 .animal-conseil{
-    margin:5px;
     font-weight: bold;
 }
 

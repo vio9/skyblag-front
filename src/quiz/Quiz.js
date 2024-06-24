@@ -54,13 +54,18 @@ function Quiz(){
     setSelectedAnswersArray(prevSelectedAnswersArray => {
         const updatedSelectedAnswersArray = [...prevSelectedAnswersArray];
         updatedSelectedAnswersArray.push(answerScore);
+
         if(updatedSelectedAnswersArray.length === 10){
             setDisabled(false);
             setDisplayNextButton(false);
+            onSubmit();
         }
+        console.log(updatedSelectedAnswersArray)
         return updatedSelectedAnswersArray;
     });
    }
+
+
 
    let numberArray;
    const onSubmit = () => {
@@ -96,15 +101,15 @@ function Quiz(){
             <h1 className="quiz-title">Découvrez votre animal totem</h1>
             { dataLoad && (
                  <div className="test">
-                <QuizComponent
-                {...questionsData[currentQuestionIndex]}
-                onAnswerChange={handleAnswerChange}
-                handleNextQuestion={handleNextQuestion}
-                displayNextButton={displayNextButton}
-                />
-                 {
-            disabled ? null : <button className="quiz-submit-button" onClick={onSubmit}>envoyer</button>
-          } 
+                    {
+                chosenAnimal ? 
+                 null :  <QuizComponent
+                 {...questionsData[currentQuestionIndex]}
+                 onAnswerChange={handleAnswerChange}
+                 handleNextQuestion={handleNextQuestion}
+                 displayNextButton={displayNextButton}
+                 />
+                    }
             </div>
             )}
          {

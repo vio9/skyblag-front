@@ -7,11 +7,13 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
     numeroQuestion, onAnswerChange, handleNextQuestion, displayNextButton}){
     
   const [selectedValue, setSelectedValue ] = useState('');
+  const [previousValue, setPreviousValue ] = useState('');
 
   const handleRadioChange = (e) => {
   const answerScore = e.target.value;
+  console.log(e.target.value)
   setSelectedValue(answerScore)
-  onAnswerChange(id, answerScore)
+  // onAnswerChange(id, answerScore)
   }
  
   const getQuestionsColorClass = (questionNumber) => {
@@ -20,6 +22,7 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
   const questionColorClass = getQuestionsColorClass(numeroQuestion);
 
   const handleNextQuestionClick = () => {
+    onAnswerChange(id, selectedValue);
    setSelectedValue('');
    handleNextQuestion();
 
@@ -96,15 +99,3 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
 }
 
 export default QuizComponent;
-
-
-// {
-//   displayNextButton && selectedValue ?  <button type="button" onClick={handleNextQuestionClick} className={`next ${questionColorClass}`}>
-//   Next <span className={`triangle ${questionColorClass}`}></span></button>  
-//   :
-//   <>
-//   <button type="button" disabled onClick={handleNextQuestionClick} className={`next ${questionColorClass}`}>
-//   Next <span className={`triangle ${questionColorClass}`}></span></button> 
-//   <p>veuillez remplir un champ</p>
-//   </>
-// }
