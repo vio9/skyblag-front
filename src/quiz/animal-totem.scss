@@ -1,15 +1,10 @@
 .animal-wrapper{
     width: 100%;
-	// height:100vh;
     display: flex;
     flex-direction: column;
-    // background-color: rgba(0, 0, 0, 0.549);
     align-items: center;
     padding: 10px 0;
-    // position: absolute;
-    // top:0em;
     animation: myAnim 1s ease 0s 1 normal forwards;
-	// backdrop-filter: blur(8px);
 }
 
 .under-wrapper{
@@ -61,6 +56,12 @@
 }
 .canvas{
 	width:0;
+}
+
+.legend-animal{
+	font-size: 11px;
+  	color: #8e8d8c;
+	margin-bottom: 10px;
 }
 @keyframes myAnim {
 	0% {

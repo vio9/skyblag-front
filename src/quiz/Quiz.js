@@ -121,6 +121,7 @@ function Quiz(){
                     description1={item.description1}
                     description2={item.description2}
                     conseil={item.conseil}
+                    legend={item.legend}
                     isAppears={isAppears}
                     onClose={resetQuiz}
                 />

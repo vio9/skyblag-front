@@ -2,7 +2,7 @@ import './animal-totem.scss';
 import { useState, useEffect, useRef } from 'react';
 import JSConfetti from 'js-confetti';
 
-function AnimalTotemComponent({name, image, description1, description2, conseil, isAppears, onClose}){
+function AnimalTotemComponent({name, image, description1, description2, conseil, legend, isAppears, onClose}){
 
 const [close, setClose] = useState(true);
 
@@ -30,6 +30,7 @@ if(isAppears){
              <div className='under-wrapper'>
             <h2 className="animal-title">Animal totem : {name}</h2>
             <img className="animal-img" src={image}/>
+            <p className='animal-legend'>{legend}</p>
             <p className="animal-p">{description1}</p>
             <p className="animal-p">{description2}</p>
             <p className="animal-conseil">Conseil : {conseil}</p>
