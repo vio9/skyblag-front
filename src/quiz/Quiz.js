@@ -23,6 +23,7 @@ function Quiz(){
        try{
            const result = await axios.get("https://skyblag-back.onrender.com/api/getAllQuiz");
            setQuestionsData(result.data)
+           console.log(result.data)
            setDataLoad(true);
        } 
        catch(error){
