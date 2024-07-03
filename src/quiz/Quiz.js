@@ -23,7 +23,6 @@ function Quiz(){
        try{
            const result = await axios.get("https://skyblag-back.onrender.com/api/getAllQuiz");
            setQuestionsData(result.data)
-           console.log(result.data)
            setDataLoad(true);
        } 
        catch(error){
@@ -59,22 +58,22 @@ function Quiz(){
         if(updatedSelectedAnswersArray.length === 10){
             setDisabled(false);
             setDisplayNextButton(false);
-            onSubmit();
+            onSubmit(updatedSelectedAnswersArray);
         }
+        console.log('longueur:',updatedSelectedAnswersArray.length)
         console.log(updatedSelectedAnswersArray)
         return updatedSelectedAnswersArray;
     });
    }
 
-
-
    let numberArray;
-   const onSubmit = () => {
-    numberArray = selectedAnswersArray.map(Number).reduce((total, current) => total +current, 0);
+   const onSubmit = (updatedSelectedAnswersArray) => {
+    numberArray = updatedSelectedAnswersArray.map(Number).reduce((total, current) => total +current, 0);
     const chosenAnimalResult = AnimalTotemCalculate(numberArray);
     setChosenAnimal(chosenAnimalResult);
     setIsAppears(true);
-    console.log(chosenAnimalResult)
+    console.log('animal choisi:',chosenAnimalResult);
+    console.log('number array:', numberArray);
    }    
 
    function AnimalTotemCalculate(numberArray){

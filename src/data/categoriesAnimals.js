@@ -11,8 +11,10 @@ const categoriesAnimals = [
     { min: 33, max: 34, animal: 'komodor' },
     { min: 35, max: 36, animal: 'panda' },
     { min: 37, max: 38, animal: 'Suricate'},
-    { min: 39, max:45, animal:'Ornithorynque'},
-    { min:46, max:50, animal : 'Kangourou'},
+    { min: 39, max: 40, animal:'Ornithorynque'},
+    { min: 41, max: 42, animal: 'Cerf'},
+    { min: 43, max: 44, animal: 'Papillon'},
+    { min:45, max:50, animal : 'Kangourou'},
 
 ]
 
