@@ -28,7 +28,7 @@ function EnVrac(){
     return(
         <div className="en-vrac">
             <Header color="three"/>
-            <h3 className="big-title-en-vrac">Animaux en vrac</h3>
+            <h3 className="big-title-en-vrac">Animaux, street art, en vrac</h3>
             <div className="wrapper-general">
             {
                 enVracPosts.map(item => (
