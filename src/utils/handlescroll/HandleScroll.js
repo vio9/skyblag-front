@@ -29,7 +29,7 @@ function HandleScroll(){
         
     return(
         <>
-         <button id={`scroll-button-${visible ? "visible" : ""}`}onClick={scrollToTop}>scroll to top</button>
+         <button id={`scroll-button-${visible ? "visible" : ""}`}onClick={scrollToTop}>haut de page</button>
         </>
     )
 }

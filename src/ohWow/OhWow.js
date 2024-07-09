@@ -34,7 +34,6 @@ function OhWow(){
             {
                 postsWow.map(item => (
                     <>
-                    <HandleScroll/>
                     <div className="wow-container" >
                     <h2 className="wow-title" key={item.id}>{item.title}</h2>
                     <Suspense fallback={<Loader/>}>
@@ -46,6 +45,7 @@ function OhWow(){
             }
             </div>
             <Footer/>
+            <HandleScroll/>
         </div>
     )
 }
