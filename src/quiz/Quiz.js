@@ -6,6 +6,7 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import AnimalTotemComponent from "./AnimalTotem";
 import categoriesAnimals from "../data/categoriesAnimals";
+import { categoriesAnimals2 } from "../data/categoriesAnimals";
 
 function Quiz(){
     const [questionsData, setQuestionsData] = useState([]);
@@ -66,7 +67,34 @@ function Quiz(){
     });
    }
 
-   let numberArray;
+      // calculer quel est l'animal totem 
+      let numberArray;
+
+      function AnimalTotemCalculate(numberArray){
+       const oneCategorieAnimal = categoriesAnimals.find(
+           categorie => numberArray >= categorie.min && numberArray <= categorie.max
+           );
+       if(!oneCategorieAnimal) return [];
+    
+       const animalName = oneCategorieAnimal.animal;
+       const animalChoose = animalTotems.filter(animal => animal.name.includes(animalName));
+       return animalChoose;
+      } 
+   
+      function AnimalTotemCalculate2(numberArray){
+       const oneCategorieAnimal2 = categoriesAnimals2.find(
+           categorie => numberArray === categorie.number
+           );
+       if(!oneCategorieAnimal2) return [];
+    
+       const animalName = oneCategorieAnimal2.animal;
+       const animalChoose = animalTotems.filter(animal => animal.name.includes(animalName));
+       return animalChoose;
+      } 
+   
+
+   // envoyer
+
    const onSubmit = (updatedSelectedAnswersArray) => {
     numberArray = updatedSelectedAnswersArray.map(Number).reduce((total, current) => total +current, 0);
     const chosenAnimalResult = AnimalTotemCalculate(numberArray);
@@ -76,16 +104,6 @@ function Quiz(){
     console.log('number array:', numberArray);
    }    
 
-   function AnimalTotemCalculate(numberArray){
-    const oneCategorieAnimal = categoriesAnimals.find(
-        categorie => numberArray >= categorie.min && numberArray <= categorie.max
-        );
-    if(!oneCategorieAnimal) return [];
- 
-    const animalName = oneCategorieAnimal.animal;
-    const animalChoose = animalTotems.filter(animal => animal.name.includes(animalName));
-    return animalChoose;
-   } 
 
    const handleNextQuestion =()=> {
         setCurrentQuestionIndex((prevQuestion) => prevQuestion +1);

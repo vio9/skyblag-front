@@ -11,7 +11,11 @@ import HandleScroll from "../utils/handlescroll/HandleScroll";
 function Apropos(){
 
     const [infosVideos, setInfosVideos] = useState([]);
+    const [infosSeries, setInfosSeries] = useState([]);
+
     const urlApiVideos = process.env.REACT_APP_API_VIDEOS;
+    const urlApiSeries = process.env.REACT_APP_API_SERIES;
+    
     const getInfosVideos = async () => {
         try{
             const result = await axios.get(urlApiVideos)
@@ -22,8 +26,19 @@ function Apropos(){
         }
     }
 
+    const getInfosSeries = async () => {
+        try{
+            const result = await axios.get(urlApiSeries)
+            setInfosSeries(result.data)
+        }
+        catch(error){
+            console.log(error)
+        }
+    }
+
     useEffect(() => {
         getInfosVideos()
+        getInfosSeries()
     }, []);
 
     const LazyPlayer = lazy(() => import('../utils/LazyPlayer'));
@@ -50,6 +65,19 @@ function Apropos(){
                     />
                     </Suspense>
                    
+                ))
+               }
+               
+               <h3 className="about-title">Dernières séries vues: </h3>
+               {
+                infosSeries.map(item => (
+                    <Suspense fallback={<div><Loader/></div>}>
+                        <LazyPlayer
+                            key={item.id}
+                            title={item.title}
+                            src={item.src}
+                        />
+                    </Suspense>
                 ))
                }
                <h3 className="about-title">Podcasts préférés</h3>

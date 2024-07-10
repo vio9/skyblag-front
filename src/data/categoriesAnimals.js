@@ -19,3 +19,26 @@ const categoriesAnimals = [
 ]
 
 export default categoriesAnimals;
+
+
+const categoriesAnimals2 = [
+    { number: 20, animal: 'rat-taupe' },
+    { number: 21, animal: 'scolopendre' },
+    { number: 26, animal: 'Capybara' },
+    { number: 27, animal: 'chat' },
+    { number: 28, animal: 'poney' },
+    { number: 29, animal: 'Corbeau'},
+    { number: 30, animal: 'phoque'},
+    { number: 31, animal: 'Crocodile'},
+    { number: 32, animal: 'Chevêche'},
+    { number: 33, animal: 'komodor' },
+    { number: 34, animal: 'panda' },
+    { number: 35, animal: 'Suricate'},
+    { number: 36, animal:'Ornithorynque'},
+    { number: 37, animal: 'Cerf'},
+    { number: 38, animal: 'Papillon'},
+    { number: 39, animal : 'Kangourou'},
+    { number: 40, animal: 'loutre'},
+
+]
+export {categoriesAnimals2};
