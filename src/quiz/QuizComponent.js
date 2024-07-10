@@ -3,7 +3,7 @@ import "./quiz-component.scss";
 import questionsColors from "../data/questionsColor";
 
 function QuizComponent({image, question, answer1, answer1Score, answer2, answer2Score,
-    answer3, answer3Score, answer4, answer4Score, answer5, answer5Score,  id, 
+    answer3, answer3Score, answer4, answer4Score, answer5, answer5Score, answer6, answer6Score, id, 
     numeroQuestion, onAnswerChange, handleNextQuestion, displayNextButton}){
     
   const [selectedValue, setSelectedValue ] = useState('');
@@ -86,6 +86,16 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
                             onChange={handleRadioChange}
                             />
                             <p className="quiz-comp-form-p">{answer5}</p>
+                         </label>  
+                         <label className="quiz-comp-label-answer">
+                            <input type="radio" 
+                            name={`myRadioGroup_${id}`} 
+                            className="checkbox" 
+                            value={answer6Score}
+                            checked={selectedValue === answer6Score}
+                            onChange={handleRadioChange}
+                            />
+                            <p className="quiz-comp-form-p">{answer6}</p>
                          </label>  
                          {
                           displayNextButton ? (
