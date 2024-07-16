@@ -23,3 +23,23 @@
   text-decoration: none;
   color:#FBDA61;
 }
+
+
+@media screen and (max-width: 768px){
+.p-footer{
+  padding: 10px 0;
+  color: white;
+  font-family: "Helvetica", "sans-serif";
+  font-weight: bold;
+  margin-left: 4px;
+  font-size: 13px;
+}
+
+.footer{
+  text-align: left;
+  height: 3em;
+  background-image: linear-gradient(45deg, #FD8200D6 0%, #FF5ACD 100%);
+  margin: 0.5em 0 0 0;
+}
+
+}

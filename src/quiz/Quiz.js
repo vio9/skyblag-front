@@ -6,7 +6,7 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import AnimalTotemComponent from "./AnimalTotem";
 import categoriesAnimals from "../data/categoriesAnimals";
-import { categoriesAnimals2 } from "../data/categoriesAnimals";
+import { categoriesAnimals2, categoriesAnimals3 } from "../data/categoriesAnimals";
 
 function Quiz(){
     const [questionsData, setQuestionsData] = useState([]);
@@ -71,7 +71,7 @@ function Quiz(){
       let numberArray;
 
       function AnimalTotemCalculate(numberArray){
-       const oneCategorieAnimal = categoriesAnimals.find(
+       const oneCategorieAnimal = categoriesAnimals3.find(
            categorie => numberArray >= categorie.min && numberArray <= categorie.max
            );
        if(!oneCategorieAnimal) return [];
