@@ -3,7 +3,6 @@
 
 .title-blog{
 background-color: #FBDA61;
-// background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
 background-image: linear-gradient(45deg, #FB9461 0%, #FF5ACD 100%);
   background-clip: border-box;
   background-clip: text;
@@ -93,7 +92,7 @@ background-image: linear-gradient(45deg, #FB9461 0%, #FF5ACD 100%);
 
     .title-blog{
         width: 100%;
-        font-size: 4.5em;
+        font-size: 4.2em;
     }
     
     .title-blog-separator{
@@ -112,7 +111,7 @@ background-image: linear-gradient(45deg, #FB9461 0%, #FF5ACD 100%);
         left: 0;
         background-color: #40c7fd;
         width: 100%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         padding: 4px;
         animation-name: slideInLeft;
         animation-duration: 0.5s;

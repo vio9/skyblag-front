@@ -5,6 +5,7 @@
     background-size: cover;
     align-items:  center;      
     font-family:  "Helvetica", "sans-serif";
+    // min-height: 100vh;
 }
 
 .quiz-title{
@@ -48,6 +49,6 @@
       }
       
     .quiz-wrapper{
-        height:157vh;
+        min-height:52vh;
     }  
 }   
