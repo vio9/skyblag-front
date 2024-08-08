@@ -15,6 +15,7 @@ function EnVrac(){
         try{
              const result = await axios.get(urlAPiEnVrac);
             setEnVracPosts(result.data)
+            console.log(result.data)
         }
         catch(error){
             console.log(error);
