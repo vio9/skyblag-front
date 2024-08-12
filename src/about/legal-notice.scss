@@ -7,14 +7,34 @@
 
 .legal-title{
     font-size: 2.5em;
-    margin: 5px;
+    margin: 20px 0 0 0;
+    color: #fff;
 }
 
 .legal-text{
-    margin: 1em 0 ;
-    height: 53vh;
+    margin: 2em 0 ;
+    height: 60vh;
+    background: #ffffff8c;
+    padding: 15px;
+    border-radius: 8px;
 }
 
 .legal-p{
-    padding:4px;
+    padding: 8px 4px;
+    color:#4f5051;
+}
+
+@media screen and (max-width: 768px){
+
+    .legal-title{
+        font-size: 1.9em;
+        margin: 1em 0 0 0;
+    }
+
+    .legal-text {
+        margin: 2em 3px;
+        padding: 8px;
+        height:43vh;
+        border-radius: 8px;
+      }
 }
