@@ -8,6 +8,7 @@ import OhWow from "./ohWow/OhWow";
 import Activities from "./activites/Activities";
 import Quiz from './quiz/Quiz';
 import LegalNotice from "./about/LegalNotice";
+import Error from "./utils/error/Error";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/activites" element={<Activities/>}/>
         <Route path='/quiz' element={<Quiz/>}/>
         <Route path='/mentions-legales' element={<LegalNotice/>}/>
+        <Route path="*" element={<Error/>}/>
 			</Routes>
 		</BrowserRouter>
 
