@@ -4,7 +4,7 @@ import { Suspense, lazy } from 'react';
 
 function EnVracPost({title, image, content}){
 
-    const LazyImage = lazy(() => import('../utils/LazyImageGeneric'));
+    const LazyImage = lazy(() => import('../utils/lazy/LazyImageGeneric'));
 
     return(
         <div className="wrapper-post-envrac">

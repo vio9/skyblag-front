@@ -24,7 +24,7 @@ function OhWow(){
         getWowPost()
     }, [])
 
-    const LazyImage = lazy(() => import('../utils/LazyImageGeneric'));
+    const LazyImage = lazy(() => import('../utils/lazy/LazyImageGeneric'));
 
     return(
         <div className="oh-wow">

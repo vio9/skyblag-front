@@ -1,8 +1,8 @@
 import { lazy, Suspense } from 'react';
-import Loader from './loader/Loader';
+import Loader from '../loader/Loader';
 
 const LazyImageGeneric = ({ src, ...rest }) => {
-  const ImageComponent = lazy(() => import('../utils/LazyImageComponent'));
+  const ImageComponent = lazy(() => import('./LazyImageComponent'));
   return (
     <Suspense fallback={<Loader/>}>
       <ImageComponent src={src}  {...rest} />

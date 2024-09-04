@@ -1,5 +1,5 @@
 import './apropos-home.scss';
-import LinkGeneric from '../utils/LinkGeneric';
+import LinkGeneric from '../utils/linkgeneric/LinkGeneric';
 
 function AproposHome(){
     return(

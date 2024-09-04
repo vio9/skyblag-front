@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import '../utils/link-generic.scss';
+import './link-generic.scss';
 
 function LinkGeneric({adress, text}){
     return(

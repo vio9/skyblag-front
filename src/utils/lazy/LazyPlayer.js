@@ -1,8 +1,8 @@
 import { lazy, Suspense } from 'react';
-import Loader from './loader/Loader';
+import Loader from '../loader/Loader';
 
 const LazyPlayer = ({ src, ...rest }) => {
-  const Player = lazy(() => import('../utils/Player'));
+  const Player = lazy(() => import('../player/Player'));
   return (
     <Suspense fallback={<Loader/>}>
       <Player src={src}  {...rest} />

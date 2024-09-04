@@ -4,10 +4,10 @@ import Footer from "../footer/Footer";
 import axios from "axios";
 import './apropos.scss';
 import StarContainer from "../utils/StarContainer";
-import Cloud from "../utils/Cloud";
+import Cloud from "../utils/clouds/Cloud";
 import Loader from "../utils/loader/Loader";
 import HandleScroll from "../utils/handlescroll/HandleScroll";
-import LinkGeneric from "../utils/LinkGeneric";
+import LinkGeneric from "../utils/linkgeneric/LinkGeneric";
 
 function Apropos(){
 
@@ -42,7 +42,7 @@ function Apropos(){
         getInfosSeries()
     }, []);
 
-    const LazyPlayer = lazy(() => import('../utils/LazyPlayer'));
+    const LazyPlayer = lazy(() => import('../utils/lazy/LazyPlayer'));
 
     return(
         <div className="a-propos">
