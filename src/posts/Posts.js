@@ -1,80 +1,40 @@
 import Post from "./Post";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import UseFetch from "../utils/hook/UseFetch";
 import './style-post.scss';
 import HandleScroll from "../utils/handlescroll/HandleScroll";
+import Loader from "../utils/loader/Loader";
+import React  from 'react';
 
 function Posts(){
 
-    // scroll 
-    const [visible, setVisible] = useState(false);
-
-    const handleScroll = () => {
-            const scrollTop = window.scrollY;
-            if(scrollTop > 500){
-                setVisible(true);
-            } else {
-                setVisible(false)
-            }
-        }
-        const scrollToTop = () => {
-            window.scrollTo({
-                top:0,
-                behavior: "smooth",
-            });
-        };
-    
-        useEffect(() => {
-            document.addEventListener("scroll", handleScroll);
-            return () => {
-                document.removeEventListener("scroll", handleScroll)
-            }
-        }, []);
-        
-    
-    // posts
     const urlApiPost = process.env.REACT_APP_API_POST; 
-    const [posts, setPosts] = useState([]);
+    const {data, loading, error} = UseFetch(urlApiPost)
+    const sortedPosts = data.sort((a,b) => new Date(b.creationDate) - new Date(a.creationDate))
 
-    const getPosts = async () => {
-        try{
-            const result = await axios.get(urlApiPost);
-            const sortedPosts = result.data.sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate));
-            setPosts(sortedPosts);
-        }
-        catch(error){
-            console.log(error);
-        }
-    }
-    useEffect(() => {
-        getPosts();
-    }, []) 
- 
-return(
-    <div className="posts">
-        {
-            posts.map(item => (
-                <>
-                <HandleScroll/>
-                <Post
-                    key={item.id}
-                    creationDate={item.creationDate}
-                    title={item.title}
-                    content1={item.content1}
-                    content2={item.content2}
-                    content3={item.content3}
-                    image={item.image}
-                    legend={item.legend}
-                    image2={item.image2}
-                    legend2={item.legend2}
-                />
-   
-                </>
-            ))
-        }
-        
-    </div>
-)
+    return (
+        <div className="posts">
+            {loading ? (
+                <Loader />
+            ) : (
+                sortedPosts.map(item => (
+                    <React.Fragment key={item.id}>
+                        <HandleScroll />
+                        <Post
+                            creationDate={item.creationDate}
+                            title={item.title}
+                            content1={item.content1}
+                            content2={item.content2}
+                            content3={item.content3}
+                            image={item.image}
+                            legend={item.legend}
+                            image2={item.image2}
+                            legend2={item.legend2}
+                        />
+                    </React.Fragment>
+                ))
+            )}
+        </div>
+    );
 
     }
 export default Posts;

@@ -7,7 +7,6 @@ import UseFetch from "../utils/hook/UseFetch";
 import Loader from "../utils/loader/Loader";
 
 function EnVrac(){
-
     const urlAPiEnVrac = process.env.REACT_APP_API_ENVRAC;
     const { data, loading, error} = UseFetch(urlAPiEnVrac);
 
@@ -41,10 +40,8 @@ function EnVrac(){
                     </div>
                 )
             }
-          
             <Footer/>
             <HandleScroll/>
-
         </div>
     )
 }

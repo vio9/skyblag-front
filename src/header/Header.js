@@ -28,7 +28,6 @@ return(
             <li><Link to="/quiz" className="link_navbar">Activités 🎮</Link></li>
         </ul>
     </div>
-
     </>
 )
 }
