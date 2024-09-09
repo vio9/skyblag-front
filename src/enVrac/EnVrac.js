@@ -9,7 +9,7 @@ import Loader from "../utils/loader/Loader";
 function EnVrac(){
     const urlAPiEnVrac = process.env.REACT_APP_API_ENVRAC;
     const { data, loading, error} = UseFetch(urlAPiEnVrac);
-
+    const largeLoader = true;
     return(
         <div className="en-vrac">       
             <Header color="three"/>
@@ -21,7 +21,7 @@ function EnVrac(){
             }
             {
                 loading? 
-                (<Loader/>)
+                (<Loader sizeLoader={largeLoader}/>)
                 :
                 (
                     <div className="wrapper-general">

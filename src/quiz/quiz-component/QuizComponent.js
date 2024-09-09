@@ -1,6 +1,6 @@
 import { useState} from "react";
 import "./quiz-component.scss";
-import questionsColors from "../data/questionsColor";
+import questionsColors from "../../data/questionsColor";
 
 function QuizComponent({image, question, answer1, answer1Score, answer2, answer2Score,
     answer3, answer3Score, answer4, answer4Score, answer5, answer5Score, answer6, answer6Score, id, 

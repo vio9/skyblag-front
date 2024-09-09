@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import QuizComponent from "./QuizComponent";
+import QuizComponent from "./quiz-component/QuizComponent";
 import './quiz.scss';
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import AnimalTotemComponent from "./AnimalTotem";
+import AnimalTotemComponent from "./animal-totem/AnimalTotem";
 import categoriesAnimals from "../data/categoriesAnimals";
 import { categoriesAnimals2, categoriesAnimals3 } from "../data/categoriesAnimals";
+import Loader from "../utils/loader/Loader";
 
 function Quiz(){
     const [questionsData, setQuestionsData] = useState([]);
@@ -19,12 +20,16 @@ function Quiz(){
     const [dataLoad, setDataLoad] = useState(false);
     const [displayNextButton, setDisplayNextButton] = useState(true);
     const [isAppears, setIsAppears] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const  largeLoader = true;
 
     const getQuiz = async () => {
        try{
+            setLoading(true);
            const result = await axios.get("https://skyblag-back.onrender.com/api/getAllQuiz");
            setQuestionsData(result.data)
            setDataLoad(true);
+           setLoading(false);
        } 
        catch(error){
            console.log(error)
@@ -61,8 +66,6 @@ function Quiz(){
             setDisplayNextButton(false);
             onSubmit(updatedSelectedAnswersArray);
         }
-        console.log('longueur:',updatedSelectedAnswersArray.length)
-        console.log(updatedSelectedAnswersArray)
         return updatedSelectedAnswersArray;
     });
    }
@@ -100,8 +103,6 @@ function Quiz(){
     const chosenAnimalResult = AnimalTotemCalculate(numberArray);
     setChosenAnimal(chosenAnimalResult);
     setIsAppears(true);
-    console.log('animal choisi:',chosenAnimalResult);
-    console.log('number array:', numberArray);
    }    
 
 
@@ -117,6 +118,10 @@ function Quiz(){
         <div className="quiz-wrapper">
             <Header/>
             <h1 className="quiz-title">Découvrez votre animal totem</h1>
+            {
+                loading ? <Loader sizeLoader={largeLoader}/> : null
+            }
+
             { dataLoad && (
                  <div className="test">
                     {

@@ -10,11 +10,12 @@ function Posts(){
     const urlApiPost = process.env.REACT_APP_API_POST; 
     const {data, loading, error} = UseFetch(urlApiPost)
     const sortedPosts = data.sort((a,b) => new Date(b.creationDate) - new Date(a.creationDate))
+    const largeLoader = true;
 
     return (
         <div className="posts">
-            {loading ? (
-                <Loader />
+            {loading ? (              
+                <Loader sizeLoader={largeLoader}/>
             ) : (
                 sortedPosts.map(item => (
                     <React.Fragment key={item.id}>

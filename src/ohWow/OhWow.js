@@ -10,6 +10,7 @@ function OhWow(){
     const urlApiOhWow = process.env.REACT_APP_API_WOW;
     const {data, loading, error} = UseFetch(urlApiOhWow);
     const LazyImage = lazy(() => import('../utils/lazy/LazyImageGeneric'));
+    const largeLoader = true;
 
     return(
         <div className="oh-wow">
@@ -17,7 +18,7 @@ function OhWow(){
             <p className="wow-presentation">Des photos avec des titres ! WOW</p>
             {
                 loading ? 
-               (<Loader/>):(
+               (<Loader sizeLoader={largeLoader}/>):(
                      <div className="wow-imgs-container">
             {
                data.map(item => (

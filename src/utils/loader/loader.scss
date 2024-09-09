@@ -5,7 +5,18 @@
     display: flex;
     max-width: 16em;
     margin:5px;
+}
 
+.big-wrapper-loader{
+    display: flex;
+    max-width: 18em;
+    height: 1.3em;
+    background-color: rgba(255, 255, 255, 0.766);
+    margin: 5em 5px;
+    padding: 37px 16px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 10px;
 }
 
 .p-loader{
