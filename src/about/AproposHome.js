@@ -31,24 +31,26 @@ function AproposHome() {
 				degrés à la plaine des Cafres et 8 degrés au piton des Neiges !
 			</p>
 			<br />
-			<h3 className="about-home-subtitle">Les réunionais</h3>
+			<h3 className="about-home-subtitle">Une société multiculturelle</h3>
 			<p className="about-home-text">
 				L'île compte plus de 850000 habitants, et de part son histoire, est une
-				société multi culturelle et métissée unique. On y trouve des communautés
-				originaires de Chine, d'Inde, d'Afrique, de Madagascar, de métropole.
-				Pour plus d'informations avec des sources :
-				<ul>
-					<li>
+				société multi culturelle unique. On y trouve des communautés
+				originaires de Chine, d'Inde, d'Afrique, de Madagascar, de métropole.</p>
+				<p>Pour plus d'informations avec des sources :
+				<ul className="about-home-ul">
+					<li className="about-home-ul-li">
 						<LinkGeneric
 							text="Petite présentation de la population réunionnaise"
 							address="https://www.reunion.fr/decouvrez/la-population-reunionnaise/"
+						color="rgb(171, 61, 202)"
 						/>
 					</li>
-					<li>
+					<li className="about-home-ul-li">
 						<LinkGeneric
 							text="Des portraits de réunionnaises et de réunionnais"
 							address="https://www.reunion.fr/decouvrez/la-population-reunionnaise/les-portraits-des-reunionnais/"
-						/>
+							color="rgb(171, 61, 202)"
+							/>
 					</li>
 				</ul>
 			</p>

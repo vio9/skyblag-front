@@ -50,7 +50,8 @@
 }
 
 .about-home-text {
-	width: 94%;
+	width: 90%;
+	padding: 10px 0px;
 }
 
 .about-home-img {
@@ -61,6 +62,10 @@
 .about-home-wrap-img {
 	display: flex;
 	justify-content: center;
+}
+
+.about-home-ul-li{
+	list-style: inside;
 }
 
 @media screen and (max-width: 768px) {
