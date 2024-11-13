@@ -36,23 +36,18 @@ function AproposHome() {
 				L'île compte plus de 850000 habitants, et de part son histoire, est une
 				société multi culturelle unique. On y trouve des communautés
 				originaires de Chine, d'Inde, d'Afrique, de Madagascar, de métropole.</p>
-				<p>Pour plus d'informations avec des sources :
-				<ul className="about-home-ul">
-					<li className="about-home-ul-li">
-						<LinkGeneric
+				<p className="about-home-text">Pour plus d'informations avec des sources :</p>
+				<p className="about-home-text"><LinkGeneric
 							text="Petite présentation de la population réunionnaise"
 							address="https://www.reunion.fr/decouvrez/la-population-reunionnaise/"
 						color="rgb(171, 61, 202)"
-						/>
-					</li>
-					<li className="about-home-ul-li">
-						<LinkGeneric
+						/></p>
+						<p className="about-home-text"><LinkGeneric
 							text="Des portraits de réunionnaises et de réunionnais"
 							address="https://www.reunion.fr/decouvrez/la-population-reunionnaise/les-portraits-des-reunionnais/"
 							color="rgb(171, 61, 202)"
 							/>
-					</li>
-				</ul>
+
 			</p>
 			<p className="about-home-text">
 				Allez en page activités pour réaliser un quiz spécial ✨
