@@ -5,20 +5,32 @@ function AproposHome() {
 	return (
 		<div className="about-home-wrapper">
 			<h2 className="about-home-title">Bienvenue sur mon site !</h2>
-			<p className="about-home-text">
-				J'ai passé une année à la Réunion, d'octobre 2023 à octobre 2024. Je
-				vous propose de découvrir en images et avec quelques textes mon
-				expérience là bas. Vous y trouverez des paysages, des animaux croisés
-				lors de balades, du street art...
-			</p>
-			<h3 className="about-home-subtitle">Situation géographique</h3>
-			<p className="about-home-text">
-				La Réunion est une île de l'océan Indien, dans l'hémisphère sud, située
-				à l'est de Madagascar et faisant partie de l'archipel des Mascareignes,
-				avec l'île Maurice et l'île Rodriges. Elle est située à 9000 kilomètres
-				de Paris.
-			</p>
+			<div className="about-home-row-wrapper">
+				<div className="about-home-subwrapper">
+					<h3 className="about-home-subtitle">Présentation du voyage</h3>
+					<p className="about-home-text">
+						J'ai passé une année à la Réunion, d'octobre 2023 à octobre 2024. Je
+						vous propose de découvrir en images et avec quelques textes mon
+						expérience là bas. Vous y trouverez des paysages, des animaux croisés
+						lors de balades, du street art...
+					</p>
+					<img className="about-home-square-img" src='https://i.postimg.cc/x83MZQMN/homepage-saint-joseph.jpg' 
+					alt='paysage de la rivière Langevin'/>
+				</div>
+				<div className="about-home-subwrapper">
+					<h3 className="about-home-subtitle">Situation géographique de la Réunion</h3>
+					<p className="about-home-text">
+						La Réunion est une île de l'océan Indien, dans l'hémisphère sud, située
+						à l'est de Madagascar et faisant partie de l'archipel des Mascareignes,
+						avec l'île Maurice et l'île Rodriges. Elle est située à 9000 kilomètres
+						de Paris.
+					</p>
+					<img className="about-home-square-img" src='https://i.postimg.cc/sXpn4vfp/image-about2.jpg' 
+					alt='paysage de la ville de Cilaos'/>
+				</div>
+			</div>
 			<br />
+	
 			<h3 className="about-home-subtitle">A quoi ça ressemble ? </h3>
 			<p className="about-home-text">
 				La Réunion est une île volcanique, dont le sommet, le piton des Neiges,
@@ -30,27 +42,20 @@ function AproposHome() {
 				quand il fait 30 degrés à Saint Pierre, il peut très bien faire 17
 				degrés à la plaine des Cafres et 8 degrés au piton des Neiges !
 			</p>
-			<br />
-			<h3 className="about-home-subtitle">Une société multiculturelle</h3>
+			
+			<div className="about-home-row-wrapper">
+			<img className="about-home-square-img" src='https://i.postimg.cc/s21ysTt0/saint-pierre.jpg' 
+			alt='paysage Saint-Pierre avec un arc en ciel sur la mer'/>
+			<img className="about-home-square-img" src='https://i.postimg.cc/YCdk55yW/plantes.jpg' 
+			alt='plantes du mascarin jartin botanique'/>
+				<img className="about-home-square-img" src='https://i.postimg.cc/1zz6PZRh/20240407-104537.jpg' 
+			alt='vue des montagnes'/>
+			</div>		
+	
 			<p className="about-home-text">
-				L'île compte plus de 850000 habitants, et de part son histoire, est une
-				société multi culturelle unique. On y trouve des communautés
-				originaires de Chine, d'Inde, d'Afrique, de Madagascar, de métropole.</p>
-				<p className="about-home-text">Pour plus d'informations avec des sources :</p>
-				<p className="about-home-text"><LinkGeneric
-							text="Petite présentation de la population réunionnaise"
-							address="https://www.reunion.fr/decouvrez/la-population-reunionnaise/"
-						color="rgb(171, 61, 202)"
-						/></p>
-						<p className="about-home-text"><LinkGeneric
-							text="Des portraits de réunionnaises et de réunionnais"
-							address="https://www.reunion.fr/decouvrez/la-population-reunionnaise/les-portraits-des-reunionnais/"
-							color="rgb(171, 61, 202)"
-							/>
-
-			</p>
-			<p className="about-home-text">
+				Retrouvez sous cette présentation des posts avec des textes et des images de mon voyage. 
 				Allez en page activités pour réaliser un quiz spécial ✨
+				Bonne balade ! 
 			</p>
 			<p className="about-home-text">
 				Ce site est entièrement codé par mes soins (front, back, base de données
@@ -64,12 +69,7 @@ function AproposHome() {
 					text="ici"
 				/>
 			</p>
-			<div className="about-home-wrap-img">
-				<img
-					className="about-home-img"
-					src="https://i.postimg.cc/tRscCsPm/coucher-soleil-ocean.jpg"
-				/>
-			</div>
+
 		</div>
 	);
 }
