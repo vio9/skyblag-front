@@ -108,7 +108,7 @@ function Apropos(){
               text="🎧 Réalisé sans trucage, podcast critique ciné"
               color="#ffffff"/>
               </p>
-              <h3 className="about-title">Jeu vidéo du moment</h3>
+              <h3 className="about-title">Derniers jeux vidéos</h3>
                 <p className="about-p">Baldur's Gate 3</p>
                 <Suspense fallback={<div><Loader/></div>}>
                     <LazyPlayer
@@ -116,7 +116,13 @@ function Apropos(){
                     src="https://www.youtube.com/embed/fxOGBxg8nsY?si=sLacyFIZGtHlbZzG"
                     />
                 </Suspense>
-                
+                <p className="about-p">Zelda tears of the kingdom</p>
+                <Suspense fallback={<div><Loader/></div>}>
+                    <LazyPlayer
+                    title="Zelda tears of the kingdom"
+                    src="https://www.youtube.com/embed/Dv-7K_m589I?si=JBATC2YKdVWPXhVZ" 
+                    />
+                </Suspense>
                 </div>
             </div>
             <Footer/>
