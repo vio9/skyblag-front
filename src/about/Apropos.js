@@ -57,12 +57,14 @@ function Apropos(){
                     <LinkGeneric
                     text='Rendez-vous sur mon LinkedIn'
                     adress='"https://www.linkedin.com/in/violaine-ernotte/'
+                    color="#ffffff"
                     />
                  </p>
                  <p className="about-p">
                  <LinkGeneric
                     text="Retrouvez ce site  ainsi que d'autres projets sur mon profil Github"
                     adress="https://github.com/vio9"
+                     color="#ffffff"
                  />   
                  </p>
                 <h3 className="about-title">Derniers films vus : </h3>
@@ -95,9 +97,17 @@ function Apropos(){
               <p className="about-p">
                 <LinkGeneric 
                 adress='https://www.radiofrance.fr/franceinter/podcasts/quand-les-dieux-rodaient-sur-la-terre/quand-les-dieux-rodaient-sur-la-terre-du-samedi-04-novembre-2023-1272749' 
-                text='🎧 Quand les dieux rodaient sur la terre, les épisodes sur Achille'/>
+                text='🎧 Quand les dieux rodaient sur la terre, les épisodes sur Achille'
+                 color="#ffffff"
+                />
+                
                 </p> 
-              <p className="about-p"><a className="about-link" href= "https://embed.acast.com/$/63a6f9cd471563001006a3a8/dune-2?feed=true">🎧 Réalisé sans trucage, podcast critique ciné</a></p>
+              <p className="about-p">
+              <LinkGeneric
+              address="https://embed.acast.com/$/63a6f9cd471563001006a3a8/dune-2?feed=true"
+              text="🎧 Réalisé sans trucage, podcast critique ciné"
+              color="#ffffff"/>
+              </p>
               <h3 className="about-title">Jeu vidéo du moment</h3>
                 <p className="about-p">Baldur's Gate 3</p>
                 <Suspense fallback={<div><Loader/></div>}>

@@ -60,13 +60,14 @@ function AproposHome() {
 			<p className="about-home-text">
 				Ce site est entièrement codé par mes soins (front, back, base de données
 				et API), et vous pouvez retrouver le projet sur mon{" "}
-				<LinkGeneric adress="https://github.com/vio9" text="profil Github" />.
+				<LinkGeneric adress="https://github.com/vio9" text="profil Github" color="#37BFFA"/>.
 			</p>
 			<p className="about-home-text">
 				Pour plus d'infos c'est par{" "}
 				<LinkGeneric
 					adress="https://skyblag-sage.vercel.app/apropos"
 					text="ici"
+					color="#37BFFA"
 				/>
 			</p>
 
