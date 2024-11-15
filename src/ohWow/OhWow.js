@@ -7,7 +7,7 @@ import HandleScroll from "../utils/handlescroll/HandleScroll";
 import UseFetch from "../utils/hook/UseFetch";
 
 function OhWow() {
-	const urlApiOhWow = process.env.REACT_APP_API_WOW;
+	const urlApiOhWow =process.env.REACT_APP_API_WOW;
 	const { data, loading, error } = UseFetch(urlApiOhWow);
 	const LazyImage = lazy(() => import("../utils/lazy/LazyImageGeneric"));
 	const largeLoader = true;
@@ -17,7 +17,7 @@ function OhWow() {
 			<Header />
 			<p className="wow-presentation">Des photos avec des titres ! WOW</p>
 			{loading ? (
-				<Loader sizeLoader={largeLoader} />
+				<div className="waiting-wrapper"><Loader sizeLoader={largeLoader} /></div>
 			) : (
 				<div className="wow-imgs-container">
 					{data.map((item) => (
