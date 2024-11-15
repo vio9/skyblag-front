@@ -12,7 +12,7 @@ function AproposHome() {
 						J'ai passé une année à la Réunion, d'octobre 2023 à octobre 2024. Je
 						vous propose de découvrir en images et avec quelques textes mon
 						expérience là bas. Vous y trouverez des paysages, des animaux croisés
-						lors de balades, du street art...
+						lors de balades...
 					</p>
 					<img className="about-home-square-img" src='https://i.postimg.cc/x83MZQMN/homepage-saint-joseph.jpg' 
 					alt='paysage de la rivière Langevin'/>
