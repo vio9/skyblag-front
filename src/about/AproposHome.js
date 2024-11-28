@@ -44,11 +44,11 @@ function AproposHome() {
 			</p>
 			
 			<div className="about-home-row-wrapper-images">
-			<img className="about-home-square-img" src='https://i.postimg.cc/s21ysTt0/saint-pierre.jpg' 
+			<img className="about-home-3-img" src='https://i.postimg.cc/s21ysTt0/saint-pierre.jpg' 
 			alt='paysage Saint-Pierre avec un arc en ciel sur la mer'/>
-			<img className="about-home-square-img" src='https://i.postimg.cc/YCdk55yW/plantes.jpg' 
+			<img className="about-home-3-img" src='https://i.postimg.cc/YCdk55yW/plantes.jpg' 
 			alt='plantes du mascarin jartin botanique'/>
-			<img className="about-home-square-img" src='https://i.postimg.cc/1zz6PZRh/20240407-104537.jpg' 
+			<img className="about-home-3-img" src='https://i.postimg.cc/1zz6PZRh/20240407-104537.jpg' 
 			alt='vue des montagnes'/>
 			</div>		
 	
