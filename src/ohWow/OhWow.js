@@ -10,7 +10,10 @@ function OhWow() {
 	const urlApiOhWow =process.env.REACT_APP_API_WOW;
 	const { data, loading, error } = UseFetch(urlApiOhWow);
 	const LazyImage = lazy(() => import("../utils/lazy/LazyImageGeneric"));
-	const largeLoader = true;
+	const largeLoader = true;	
+
+	console.log(data)
+	let alphabeticalOrderData = data.sort((a,b) => a.title.localeCompare(b.title));
 
 	return (
 		<div className="oh-wow">
@@ -20,7 +23,7 @@ function OhWow() {
 				<div className="waiting-wrapper"><Loader sizeLoader={largeLoader} /></div>
 			) : (
 				<div className="wow-imgs-container">
-					{data.map((item) => (
+					{alphabeticalOrderData.map((item) => (
 						<>
 							<div className="wow-container">
 								<h2 className="wow-title" key={item.id}>
