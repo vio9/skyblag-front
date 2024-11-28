@@ -141,5 +141,8 @@
 
 	.about-home-row-wrapper-images {
 		width: 100%;
+		display: flex;
+		flex-direction: column;
 	}	
+	
 }	
