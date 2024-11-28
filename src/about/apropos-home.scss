@@ -1,4 +1,13 @@
+.about-home-wrapper,
+.about-home-row-wrapper,
+.about-home-row-wrapper-images {
+	display: flex;
+	justify-content: center;
+}
+
 .about-home-wrapper {
+	flex-direction: column;
+	align-items: center;
 	padding: 1.5em;
 	margin: 1em;
 	border-radius: 3px;
@@ -30,75 +39,61 @@
 	background-size: 154px 154px;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
 		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-	display: flex;
-	flex-direction: column;
 	width: 77%;
-	align-items: center;
 }
 
-.about-home-row-wrapper{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+.about-home-row-wrapper-images {
+	width: 78%;
 }
-.about-home-subwrapper{
-	display: flex;
+
+.about-home-subwrapper {
 	flex-direction: column;
 	max-width: 50%;
 	padding: 0 0 20px 0;
 	align-items: center;
-}
-
-.about-home-title {
-	text-align: center;
-	margin: 1em 0;
-	padding: 0 0 20px 0;
-	font-size: 2.4em;
-	color:#424040;
-}
-
-.about-home-subtitle {
-	padding-top: 4px;
-	text-align: center;
+	display: flex;
 }
 
 .about-home-text {
-	width: 81%;
-	padding: 1em 0px;
+	width: 76%;
+	padding: 1em;
 	text-align: justify;
+	border-radius: 10px;
+	margin: 1em 0;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+		rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+	&--mod1 {
+		background-color: #f8da7e;
+	}
+
+	&--mod2 {
+		background-color: #db87d0;
+	}
+	&--mod3 {
+		background-color: #8cead4;
+	}
+	&--mod4 {
+		background-color: #a3baf1;
+	}
+	&--mod5 {
+		background-color: #eaf0ef;
+	}
 }
 
 .about-home-square-img{
-width:80%;
+	width:80%;
 }
 
-.about-home-image{
-	width:40%;
-}
-
-
-.about-home-wrap-img {
-	display: flex;
-	justify-content: center;
-}
-
-@media screen and (max-width: 768px) {
-	.about-home-wrapper {
-		width: 85%;
-		padding: 10px;
-		margin-top: 13px;
+.about-home-title {
+	margin: 1em 0;
+	padding: 8px 0;
+	color: #4a4f53;
+	font-size: 2em;
 	}
 
-	.about-home-title {
-		font-size: 2em;
-		padding: 8px 0;
+	.about-home-subtitle{
+		margin: 1em;
+		color: #4a4f53;
+		font-size: 1.5em;
 	}
-
-	.about-home-img {
-		width: 80%;
-	}
-
-	.about-home-text {
-		font-size: 0.9em;
-	}
-}
