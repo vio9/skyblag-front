@@ -18,8 +18,8 @@ function Posts() {
 			{loading ? (
 				<Loader sizeLoader={largeLoader} />
 			) : (
-				sortedPosts.map((item) => (
-					<React.Fragment key={item.id}>
+				sortedPosts.map((item, index) => (
+					<React.Fragment key={index}>
 						<HandleScroll />
 						<Post
 							creationDate={item.creationDate}
