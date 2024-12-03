@@ -11,6 +11,7 @@
     background-image:  radial-gradient(#ffffff 0.5px, transparent 0.5px), radial-gradient(#ffffff 0.5px, #0193F5 0.5px);
     background-size: 20px 20px;
     background-position: 0 0,10px 10px;
+    min-height: 93.8vh;
 
 }
 
@@ -24,10 +25,14 @@
 
 .big-title-en-vrac{
     font-size: 2em;
+    color:#ffffff;
+    margin-top:10px;
 }
 
 @media screen and (max-width: 768px){
-
+    .en-vrac{
+        min-height:92.5vh;
+    }
     .wrapper-general{
         flex-direction: column;
         margin-top: 0.5em;
