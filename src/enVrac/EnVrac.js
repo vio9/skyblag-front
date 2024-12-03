@@ -11,6 +11,7 @@ function EnVrac(){
     const { data, loading, error} = UseFetch(urlAPiEnVrac);
     const largeLoader = true;
     return(
+        <>
         <div className="en-vrac">       
             <Header color="three"/>
             <h3 className="big-title-en-vrac">Des choses en vrac</h3>
@@ -40,9 +41,11 @@ function EnVrac(){
                     </div>
                 )
             }
-            <Footer/>
+           
             <HandleScroll/>
         </div>
+        <Footer/>
+        </>
     )
 }
 

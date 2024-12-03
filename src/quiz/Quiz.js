@@ -110,6 +110,7 @@ function Quiz() {
 	};
 
 	return (
+		<>
 		<div className="quiz-wrapper">
 			<Header />
 			<h1 className="quiz-title">Découvrez votre animal totem</h1>
@@ -141,8 +142,10 @@ function Quiz() {
 						/>
 				  ))
 				: null}
-			<Footer />
+			
 		</div>
+		<Footer />
+		</>
 	);
 }
 

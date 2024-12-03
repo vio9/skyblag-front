@@ -16,6 +16,7 @@ function OhWow() {
 	let alphabeticalOrderData = data.sort((a,b) => a.title.localeCompare(b.title));
 
 	return (
+		<>
 		<div className="oh-wow">
 			<Header />
 			<p className="wow-presentation">Des photos avec des titres ! WOW</p>
@@ -42,9 +43,11 @@ function OhWow() {
 				</div>
 			)}
 
-			<Footer />
+			
 			<HandleScroll />
 		</div>
+		<Footer />
+		</>
 	);
 }
 
