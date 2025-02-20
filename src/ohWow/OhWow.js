@@ -12,7 +12,6 @@ function OhWow() {
 	const LazyImage = lazy(() => import("../utils/lazy/LazyImageGeneric"));
 	const largeLoader = true;	
 
-	console.log(data)
 	let alphabeticalOrderData = data.sort((a,b) => a.title.localeCompare(b.title));
 
 	return (

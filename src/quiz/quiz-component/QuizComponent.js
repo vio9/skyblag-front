@@ -10,7 +10,6 @@ function QuizComponent({image, question, answer1, answer1Score, answer2, answer2
 
   const handleRadioChange = (e) => {
   const answerScore = e.target.value;
-  console.log(e.target.value)
   setSelectedValue(answerScore)
   // onAnswerChange(id, answerScore)
   }
