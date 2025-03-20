@@ -24,6 +24,7 @@ function Quiz() {
 
 	const urlApiQuiz = process.env.REACT_APP_API_QUIZ;
 	const urlApiAnimalsTotem = process.env.REACT_APP_API_ANIMALS_TOTEM;
+
 	const getQuiz = async () => {
 		try {
 			setLoading(true);
@@ -50,28 +51,23 @@ function Quiz() {
 		getAnimalTotem();
 	}, []);
 
+	// maj reponses form + créa tableau avec toutes les réponses
 	const handleAnswerChange = (id, answerScore) => {
-		setSelectedAnswers((prevSelectedAnswers) => ({
-			...prevSelectedAnswers,
-			[id]: answerScore,
+		setSelectedAnswers((prev) => ({
+			...prev,[id]: answerScore,
 		}));
-
-		setSelectedAnswersArray((prevSelectedAnswersArray) => {
-			const updatedSelectedAnswersArray = [...prevSelectedAnswersArray];
-			updatedSelectedAnswersArray.push(answerScore);
-
-			if (updatedSelectedAnswersArray.length === 10) {
+		setSelectedAnswersArray((prevArray) => {
+			const newArray = [...prevArray, answerScore];
+			if (newArray.length === 10) {
 				setDisabled(false);
 				setDisplayNextButton(false);
-				onSubmit(updatedSelectedAnswersArray);
+				onSubmit(newArray);
 			}
-			return updatedSelectedAnswersArray;
+			return newArray;
 		});
 	};
 
 	// calculer quel est l'animal totem
-	let numberArray;
-
 	function AnimalTotemCalculate(numberArray) {
 		const oneCategorieAnimal = categoriesAnimals.find(
 			(categorie) =>
@@ -86,10 +82,9 @@ function Quiz() {
 		return animalChoose;
 	}
 
-	// envoyer
-
-	const onSubmit = (updatedSelectedAnswersArray) => {
-		numberArray = updatedSelectedAnswersArray
+	// envoi du quiz 
+	const onSubmit = (newArray) => {
+	const numberArray = newArray
 			.map(Number)
 			.reduce((total, current) => total + current, 0);
 		const chosenAnimalResult = AnimalTotemCalculate(numberArray);
@@ -100,9 +95,15 @@ function Quiz() {
 	const handleNextQuestion = () => {
 		setCurrentQuestionIndex((prevQuestion) => prevQuestion + 1);
 	};
-
+	
 	const resetQuiz = () => {
-		window.location.reload();
+		setSelectedAnswers({});
+		setSelectedAnswersArray([]);
+		setChosenAnimal(null);
+		setDisabled(true);
+		setCurrentQuestionIndex(0);
+		setDisplayNextButton(true);
+		setIsAppears(false);
 	};
 
 	return (
@@ -113,7 +114,7 @@ function Quiz() {
 			{loading ? <Loader sizeLoader={largeLoader} /> : null}
 
 			{dataLoad && (
-				<div className="test">
+				<div className="wrapper-quiz-component">
 					{chosenAnimal ? null : (
 						<QuizComponent
 							{...questionsData[currentQuestionIndex]}
