@@ -5,11 +5,7 @@ import "./quiz.scss";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import AnimalTotemComponent from "./animal-totem/AnimalTotem";
-import categoriesAnimals from "../data/categoriesAnimals";
-import {
-	categoriesAnimals2,
-	categoriesAnimals3,
-} from "../data/categoriesAnimals";
+import { categoriesAnimals } from "../data/categoriesAnimals";
 import Loader from "../utils/loader/Loader";
 
 function Quiz() {
@@ -77,7 +73,7 @@ function Quiz() {
 	let numberArray;
 
 	function AnimalTotemCalculate(numberArray) {
-		const oneCategorieAnimal = categoriesAnimals3.find(
+		const oneCategorieAnimal = categoriesAnimals.find(
 			(categorie) =>
 				numberArray >= categorie.min && numberArray <= categorie.max
 		);
